@@ -20,6 +20,9 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
+import com.example.gymtrack.data.saveProfileToDatabase
+import com.example.gymtrack.data.syncProfileToDatabaseIfMissing
 
 private val Background = Color(0xFF080B09)
 private val CardColor = Color(0xFF171E19)
@@ -75,9 +78,10 @@ private fun loadProfile(context: Context): MemberProfile? {
 }
 
 @Composable
-fun GymSetupApp() {
+fun GymSetupApp(onFinished: () -> Unit = {}) {
 
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
 
     var screen by remember { mutableStateOf("splash") }
     var onboardingPage by remember { mutableStateOf(0) }
@@ -88,10 +92,13 @@ fun GymSetupApp() {
 
         savedProfile = loadProfile(context)
 
-        screen = if (savedProfile != null) {
-            "done"
+        val existing = savedProfile
+        if (existing != null) {
+            // Returning user: make sure the profile is also in the database, then go straight to the app.
+            syncProfileToDatabaseIfMissing(context, existing)
+            onFinished()
         } else {
-            "onboarding"
+            screen = "onboarding"
         }
     }
 
@@ -129,13 +136,14 @@ fun GymSetupApp() {
             "profile" -> ProfileSetupScreen(
                 onSave = { profile ->
                     saveProfile(context, profile)
+                    scope.launch { saveProfileToDatabase(context, profile) }
                     savedProfile = profile
                     screen = "done"
                 }
             )
 
             "done" -> savedProfile?.let { profile ->
-                ProfileDoneScreen(profile)
+                ProfileDoneScreen(profile, onContinue = onFinished)
             }
         }
     }
@@ -672,7 +680,10 @@ fun SectionHeading(title: String) {
 // ---------------- PROFILE COMPLETED ----------------
 
 @Composable
-fun ProfileDoneScreen(profile: MemberProfile) {
+fun ProfileDoneScreen(
+    profile: MemberProfile,
+    onContinue: () -> Unit = {}
+) {
 
     Column(
         modifier = Modifier
@@ -748,6 +759,26 @@ fun ProfileDoneScreen(profile: MemberProfile) {
             color = Gray,
             fontSize = 15.sp
         )
+
+        Spacer(modifier = Modifier.height(25.dp))
+
+        Button(
+            onClick = onContinue,
+            modifier = Modifier
+                .fillMaxWidth()
+                .height(55.dp),
+            colors = ButtonDefaults.buttonColors(
+                containerColor = LightBlue,
+                contentColor = Color.Black
+            ),
+            shape = RoundedCornerShape(15.dp)
+        ) {
+            Text(
+                text = "Continue",
+                fontSize = 17.sp,
+                fontWeight = FontWeight.Bold
+            )
+        }
     }
 }
 

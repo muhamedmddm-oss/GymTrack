@@ -6,6 +6,16 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.ui.platform.LocalContext
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.viewmodel.initializer
+import androidx.lifecycle.viewmodel.viewModelFactory
+import com.example.gymtrack.data.GymTrackData
+import com.example.gymtrack.data.entity.UserProfileEntity
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -22,26 +32,34 @@ private val Green = Color(0xFF4CAF50)
 
 @Composable
 fun HomeScreen() {
+    val appContext = LocalContext.current.applicationContext
+    val viewModel: HomeViewModel = viewModel(
+        factory = viewModelFactory { initializer { HomeViewModel(GymTrackData.profiles(appContext)) } }
+    )
+    val profile by viewModel.profile.collectAsStateWithLifecycle()
+
     Scaffold(
         containerColor = Dark
     ) { paddingValues ->
         HomeTab(
+            profile = profile,
             modifier = Modifier.padding(paddingValues)
         )
     }
 }
 
 @Composable
-fun HomeTab(modifier: Modifier = Modifier) {
+fun HomeTab(profile: UserProfileEntity?, modifier: Modifier = Modifier) {
 
     Column(
         modifier = modifier
             .fillMaxSize()
             .background(Dark)
+            .verticalScroll(rememberScrollState())
             .padding(20.dp)
     ) {
         Text(
-            text = "Welcome Back, Mohamed",
+            text = if (profile != null) "Welcome Back, ${firstName(profile.name)}" else "Welcome Back",
             color = White,
             fontSize = 25.sp,
             fontWeight = FontWeight.Bold
@@ -54,6 +72,16 @@ fun HomeTab(modifier: Modifier = Modifier) {
             color = Gray,
             fontSize = 15.sp
         )
+
+        if (profile != null) {
+            Spacer(modifier = Modifier.height(28.dp))
+
+            SectionTitle(title = "Your Profile")
+
+            Spacer(modifier = Modifier.height(12.dp))
+
+            ProfileStats(profile)
+        }
 
         Spacer(modifier = Modifier.height(28.dp))
 
@@ -113,6 +141,9 @@ fun HomeTab(modifier: Modifier = Modifier) {
             title = "Push Day",
             subtitle = "3 Exercises • 45 Minutes"
         )
+
+        // Extra space so the last card can scroll above the floating "My Workout Plans" button.
+        Spacer(modifier = Modifier.height(88.dp))
     }
 }
 
@@ -242,3 +273,46 @@ fun InfoCard(
         }
     }
 }
+
+/** The saved profile (from the database) as four stat cards. */
+@Composable
+fun ProfileStats(profile: UserProfileEntity) {
+    Column(verticalArrangement = Arrangement.spacedBy(12.dp)) {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            StatCard(
+                title = "Weight",
+                value = profile.weightKg?.let { "${formatNumber(it)} kg" } ?: "—",
+                modifier = Modifier.weight(1f)
+            )
+            StatCard(
+                title = "Height",
+                value = profile.heightCm?.let { "${formatNumber(it)} cm" } ?: "—",
+                modifier = Modifier.weight(1f)
+            )
+        }
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.spacedBy(12.dp)
+        ) {
+            StatCard(
+                title = "Age",
+                value = profile.age?.let { "$it years" } ?: "—",
+                modifier = Modifier.weight(1f)
+            )
+            StatCard(
+                title = "Days / Week",
+                value = profile.trainingDaysPerWeek.toString(),
+                modifier = Modifier.weight(1f)
+            )
+        }
+    }
+}
+
+private fun firstName(name: String): String = name.trim().substringBefore(' ')
+
+/** 80.0 -> "80", 72.5 -> "72.5" */
+private fun formatNumber(value: Double): String =
+    if (value % 1.0 == 0.0) value.toInt().toString() else value.toString()

@@ -19,23 +19,7 @@ import com.example.gymtrack.workout.WorkoutDao
 import com.example.gymtrack.workout.WorkoutDayEntity
 import com.example.gymtrack.workout.WorkoutPlanEntity
 
-/**
- * The ONE Room database of GymTrack (Person 7). Never create another instance:
- * always use [getInstance] (or the repositories in [GymTrackData]).
- *
- * Tables: user_profile, workout_plans, workout_days, exercises,
- *         workout_sessions, session_exercises, session_sets.
- *
- * Version history:
- *  1 - temporary Person 2 database (workout_plans, workout_days)
- *  2 - real database: + user_profile, exercises, workout_sessions, session_exercises,
- *      session_sets, and workout_plans.userId  (see [MIGRATION_1_2])
- *  3 - user_profile.age (see [MIGRATION_2_3])
- *  4 - workout_sessions.accumulatedMillis / runningSinceMillis: persisted Active Workout timer (see [MIGRATION_3_4])
- *
- * When you change the schema: bump [version], add a Migration in data/migration/Migrations.kt and
- * register it in [getInstance]. Never use fallbackToDestructiveMigration().
- */
+
 @Database(
     entities = [
         UserProfileEntity::class,

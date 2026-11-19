@@ -3,18 +3,7 @@ package com.example.gymtrack.data.migration
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-/**
- * v1 (temporary Person 2 database: workout_plans + workout_days)  ->  v2 (real GymTrack database).
- *
- * Non-destructive: every existing plan and day is kept untouched.
- *  - New tables are only CREATED.
- *  - workout_plans gets its new nullable `userId` column with ALTER TABLE ... ADD COLUMN.
- *    We deliberately do NOT recreate workout_plans (the usual copy/drop/rename trick): dropping it
- *    would trigger ON DELETE CASCADE and wipe all rows of workout_days.
- *
- * The SQL must match what Room generates for the entities, otherwise Room refuses to open the
- * database. Keep it in sync with the entity classes if they ever change.
- */
+
 val MIGRATION_1_2 = object : Migration(1, 2) {
     override fun migrate(db: SupportSQLiteDatabase) {
         db.execSQL(
@@ -28,7 +17,6 @@ val MIGRATION_1_2 = object : Migration(1, 2) {
                 "`updatedAt` INTEGER NOT NULL)"
         )
 
-        // New nullable column + foreign key + index on the existing plans table.
         db.execSQL(
             "ALTER TABLE `workout_plans` ADD COLUMN `userId` INTEGER " +
                 "REFERENCES `user_profile`(`id`) ON UPDATE NO ACTION ON DELETE SET NULL"
@@ -96,18 +84,13 @@ val MIGRATION_1_2 = object : Migration(1, 2) {
     }
 }
 
-/** v2 -> v3: the onboarding screen also collects the user's age. Nullable column, existing rows keep working. */
 val MIGRATION_2_3 = object : Migration(2, 3) {
     override fun migrate(db: SupportSQLiteDatabase) {
         db.execSQL("ALTER TABLE `user_profile` ADD COLUMN `age` INTEGER")
     }
 }
 
-/**
- * v3 -> v4 (Active Workout timer): the timer state of a running workout is stored on its session row,
- * so a workout (and its elapsed time) can be resumed after the app was closed.
- * Existing sessions keep working: accumulatedMillis starts at 0 and runningSinceMillis at NULL.
- */
+
 val MIGRATION_3_4 = object : Migration(3, 4) {
     override fun migrate(db: SupportSQLiteDatabase) {
         db.execSQL("ALTER TABLE `workout_sessions` ADD COLUMN `accumulatedMillis` INTEGER NOT NULL DEFAULT 0")

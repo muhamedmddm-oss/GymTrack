@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import com.example.gymtrack.workout.data.entity.WorkoutDayEntity
+import com.example.gymtrack.workout.WorkoutDayEntity
 
 /**
  * An exercise planned for a workout day (Person 3). [sets], [reps] and [weightKg] are the TARGETS;

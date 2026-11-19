@@ -1,7 +1,7 @@
 package com.example.gymtrack.workout.presentation
 
-import com.example.gymtrack.workout.domain.model.Weekday
-import com.example.gymtrack.workout.presentation.viewmodel.WorkoutPlanViewModel
+import com.example.gymtrack.workout.Weekday
+import com.example.gymtrack.workout.WorkoutPlanViewModel
 import com.example.gymtrack.workout.testutil.FakeWorkoutRepository
 import com.example.gymtrack.workout.testutil.FakeWorkoutRepository.Companion.day
 import com.example.gymtrack.workout.testutil.FakeWorkoutRepository.Companion.plan

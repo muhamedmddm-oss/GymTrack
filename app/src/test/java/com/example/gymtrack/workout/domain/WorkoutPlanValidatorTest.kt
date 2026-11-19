@@ -1,8 +1,8 @@
 package com.example.gymtrack.workout.domain
 
-import com.example.gymtrack.workout.domain.model.Weekday
-import com.example.gymtrack.workout.domain.validation.DayFormInput
-import com.example.gymtrack.workout.domain.validation.WorkoutPlanValidator
+import com.example.gymtrack.workout.Weekday
+import com.example.gymtrack.workout.DayFormInput
+import com.example.gymtrack.workout.WorkoutPlanValidator
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertNotNull

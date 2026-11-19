@@ -14,9 +14,10 @@ import com.example.gymtrack.data.entity.UserProfileEntity
 import com.example.gymtrack.data.entity.WorkoutSessionEntity
 import com.example.gymtrack.data.migration.MIGRATION_1_2
 import com.example.gymtrack.data.migration.MIGRATION_2_3
-import com.example.gymtrack.workout.data.dao.WorkoutDao
-import com.example.gymtrack.workout.data.entity.WorkoutDayEntity
-import com.example.gymtrack.workout.data.entity.WorkoutPlanEntity
+import com.example.gymtrack.data.migration.MIGRATION_3_4
+import com.example.gymtrack.workout.WorkoutDao
+import com.example.gymtrack.workout.WorkoutDayEntity
+import com.example.gymtrack.workout.WorkoutPlanEntity
 
 /**
  * The ONE Room database of GymTrack (Person 7). Never create another instance:
@@ -30,6 +31,7 @@ import com.example.gymtrack.workout.data.entity.WorkoutPlanEntity
  *  2 - real database: + user_profile, exercises, workout_sessions, session_exercises,
  *      session_sets, and workout_plans.userId  (see [MIGRATION_1_2])
  *  3 - user_profile.age (see [MIGRATION_2_3])
+ *  4 - workout_sessions.accumulatedMillis / runningSinceMillis: persisted Active Workout timer (see [MIGRATION_3_4])
  *
  * When you change the schema: bump [version], add a Migration in data/migration/Migrations.kt and
  * register it in [getInstance]. Never use fallbackToDestructiveMigration().
@@ -44,7 +46,7 @@ import com.example.gymtrack.workout.data.entity.WorkoutPlanEntity
         SessionExerciseEntity::class,
         SessionSetEntity::class
     ],
-    version = 3,
+    version = 4,
     exportSchema = true
 )
 abstract class GymTrackDatabase : RoomDatabase() {
@@ -67,7 +69,7 @@ abstract class GymTrackDatabase : RoomDatabase() {
                     GymTrackDatabase::class.java,
                     DATABASE_NAME
                 )
-                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
+                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4)
                     .build()
                     .also { instance = it }
             }

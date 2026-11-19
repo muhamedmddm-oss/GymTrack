@@ -8,14 +8,12 @@ import com.example.gymtrack.data.entity.SessionSetEntity
 import com.example.gymtrack.data.entity.WorkoutSessionEntity
 import kotlinx.coroutines.flow.Flow
 
-/** Workout sessions and their history (Person 4 writes, Persons 5 and 6 read). */
 class WorkoutSessionRepository(
     private val dao: WorkoutSessionDao,
     private val clock: () -> Long = { System.currentTimeMillis() }
 ) {
     // ---- Running a workout ----
 
-    /** Starts a session. [dayName]/[planName] are copied so history stays readable later. */
     suspend fun startSession(
         dayId: Long?,
         dayName: String,
@@ -35,21 +33,17 @@ class WorkoutSessionRepository(
         )
     }
 
-    /** The unfinished workout of a day (so the Active Workout screen can resume it), or null. */
     suspend fun getUnfinishedSessionForDay(dayId: Long): WorkoutSessionEntity? =
         dao.getUnfinishedSessionForDay(dayId)
 
     suspend fun getSessionDetails(sessionId: Long): SessionWithDetails? = dao.getSessionWithDetails(sessionId)
 
-    /** Stores the timer so the elapsed time survives rotation, process death and closing the app. */
     suspend fun saveTimerState(sessionId: Long, accumulatedMillis: Long, runningSinceMillis: Long?) =
         dao.updateTimerState(sessionId, accumulatedMillis, runningSinceMillis)
 
-    /** Adds the planned exercises of a day (with their empty sets) to a session in one transaction. */
     suspend fun addExercisesWithSets(sessionId: Long, exercises: List<SessionExerciseDraft>) =
         dao.addExercisesWithSets(sessionId, exercises)
 
-    /** Adds one exercise with [setCount] empty sets. Returns the new session-exercise id. */
     suspend fun addExerciseWithSets(
         sessionId: Long,
         exerciseId: Long?,
@@ -75,10 +69,7 @@ class WorkoutSessionRepository(
     /** Removes an exercise (and, through CASCADE, its sets) from a session. */
     suspend fun removeExerciseFromSession(sessionExerciseId: Long) = dao.deleteSessionExercise(sessionExerciseId)
 
-    /**
-     * Ends the session with the pause-aware duration measured by the Active Workout timer
-     * (unlike [finishSession], which would count pauses as workout time).
-     */
+   
     suspend fun finishSessionWithDuration(sessionId: Long, durationMillis: Long) {
         val safeMillis = durationMillis.coerceAtLeast(0)
         dao.markFinished(
@@ -140,7 +131,7 @@ class WorkoutSessionRepository(
 
     suspend fun deleteSession(sessionId: Long) = dao.deleteSession(sessionId)
 
-    // ---- Reading history ----
+    //  Reading history 
 
     fun observeAllSessions(): Flow<List<WorkoutSessionEntity>> = dao.observeAllSessions()
     fun observeSessionsForDay(dayId: Long): Flow<List<WorkoutSessionEntity>> = dao.observeSessionsForDay(dayId)

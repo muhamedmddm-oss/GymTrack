@@ -6,11 +6,7 @@ import com.example.gymtrack.workout.WorkoutDayUsageProvider
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
-/**
- * The real implementation of Person 2's [WorkoutDayUsageProvider], backed by Room.
- * A day is "in use" when it has planned exercises OR recorded workout sessions, so deleting such
- * a day (or its plan) archives it instead of destroying the history.
- */
+
 class RoomWorkoutDayUsageProvider(
     private val exerciseDao: ExerciseDao,
     private val sessionDao: WorkoutSessionDao

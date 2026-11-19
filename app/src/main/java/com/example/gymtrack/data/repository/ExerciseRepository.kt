@@ -4,7 +4,6 @@ import com.example.gymtrack.data.dao.ExerciseDao
 import com.example.gymtrack.data.entity.ExerciseEntity
 import kotlinx.coroutines.flow.Flow
 
-/** Planned exercises of a workout day (Person 3). */
 class ExerciseRepository(private val dao: ExerciseDao) {
 
     fun observeExercises(dayId: Long): Flow<List<ExerciseEntity>> = dao.observeForDay(dayId)
@@ -13,7 +12,6 @@ class ExerciseRepository(private val dao: ExerciseDao) {
 
     suspend fun getExercise(exerciseId: Long): ExerciseEntity? = dao.getById(exerciseId)
 
-    /** Appends the exercise at the end of the day. Returns the new exercise id. */
     suspend fun addExercise(
         dayId: Long,
         name: String,

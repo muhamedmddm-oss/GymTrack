@@ -15,9 +15,9 @@ import com.example.gymtrack.data.entity.WorkoutSessionEntity
 import com.example.gymtrack.data.migration.MIGRATION_1_2
 import com.example.gymtrack.data.migration.MIGRATION_2_3
 import com.example.gymtrack.data.migration.MIGRATION_3_4
-import com.example.gymtrack.workout.data.dao.WorkoutDao
-import com.example.gymtrack.workout.data.entity.WorkoutDayEntity
-import com.example.gymtrack.workout.data.entity.WorkoutPlanEntity
+import com.example.gymtrack.workout.WorkoutDao
+import com.example.gymtrack.workout.WorkoutDayEntity
+import com.example.gymtrack.workout.WorkoutPlanEntity
 
 /**
  * The ONE Room database of GymTrack (Person 7). Never create another instance:

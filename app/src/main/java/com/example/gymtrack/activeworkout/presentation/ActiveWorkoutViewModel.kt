@@ -9,7 +9,7 @@ import com.example.gymtrack.data.entity.SessionExerciseEntity
 import com.example.gymtrack.data.entity.SessionSetEntity
 import com.example.gymtrack.data.repository.ExerciseRepository
 import com.example.gymtrack.data.repository.WorkoutSessionRepository
-import com.example.gymtrack.workout.domain.repository.WorkoutRepository
+import com.example.gymtrack.workout.WorkoutRepository
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

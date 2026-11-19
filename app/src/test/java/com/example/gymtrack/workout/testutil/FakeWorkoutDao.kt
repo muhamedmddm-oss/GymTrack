@@ -1,9 +1,9 @@
 package com.example.gymtrack.workout.testutil
 
-import com.example.gymtrack.workout.data.dao.DayWithPlanName
-import com.example.gymtrack.workout.data.dao.WorkoutDao
-import com.example.gymtrack.workout.data.entity.WorkoutDayEntity
-import com.example.gymtrack.workout.data.entity.WorkoutPlanEntity
+import com.example.gymtrack.workout.DayWithPlanName
+import com.example.gymtrack.workout.WorkoutDao
+import com.example.gymtrack.workout.WorkoutDayEntity
+import com.example.gymtrack.workout.WorkoutPlanEntity
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map

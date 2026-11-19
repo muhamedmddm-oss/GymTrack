@@ -171,7 +171,7 @@ fun SplashScreen() {
 
         Text(
             text = "IRON HOUSE",
-            color = Blue,
+            color = Orange,
             fontSize = 32.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Serif
@@ -187,7 +187,7 @@ fun SplashScreen() {
         Spacer(modifier = Modifier.height(35.dp))
 
         CircularProgressIndicator(
-            color = LightBlue,
+            color = Orange,
             strokeWidth = 3.dp,
             modifier = Modifier.size(30.dp)
         )
@@ -232,7 +232,7 @@ fun OnboardingScreen(
 
             Text(
                 text = "IRON HOUSE",
-                color = Blue,
+                color = Orange,
                 fontWeight = FontWeight.Bold,
                 fontSize = 17.sp
             )
@@ -296,7 +296,7 @@ fun OnboardingScreen(
                         .width(if (index == page) 27.dp else 9.dp)
                         .height(8.dp)
                         .background(
-                            if (index == page) LightBlue else Gray,
+                            if (index == page) Orange else Gray,
                             RoundedCornerShape(10.dp)
                         )
                 )
@@ -311,7 +311,7 @@ fun OnboardingScreen(
                 .fillMaxWidth()
                 .height(55.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = LightBlue,
+                containerColor = Orange,
                 contentColor = Color.Black
             ),
             shape = RoundedCornerShape(15.dp)
@@ -355,7 +355,7 @@ fun WelcomeScreen(onStart: () -> Unit) {
 
         Text(
             text = "IRON HOUSE GYM",
-            color = Blue,
+            color = Orange,
             fontSize = 30.sp,
             fontWeight = FontWeight.Bold,
             fontFamily = FontFamily.Serif
@@ -378,7 +378,7 @@ fun WelcomeScreen(onStart: () -> Unit) {
                 .fillMaxWidth()
                 .height(55.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor =Blue,
+                containerColor =Orange,
                 contentColor = Color.Black
             ),
             shape = RoundedCornerShape(15.dp)
@@ -527,7 +527,7 @@ fun ProfileSetupScreen(
                             )
                         },
                         colors = FilterChipDefaults.filterChipColors(
-                            selectedContainerColor = LightBlue,
+                            selectedContainerColor = Orange,
                             selectedLabelColor = Color.Black,
                             containerColor = CardColor,
                             labelColor = White
@@ -541,7 +541,7 @@ fun ProfileSetupScreen(
 
         Text(
             text = "Selected: ${selectedDays.size} training days",
-            color = LightBlue,
+            color = Orange,
             fontSize = 14.sp,
             fontWeight = FontWeight.Bold
         )
@@ -593,7 +593,7 @@ fun ProfileSetupScreen(
                 .fillMaxWidth()
                 .height(58.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = LightBlue,
+                containerColor = Orange,
                 contentColor = Color.Black
             ),
             shape = RoundedCornerShape(15.dp)
@@ -651,9 +651,9 @@ fun ProfileInput(
             colors = OutlinedTextFieldDefaults.colors(
                 focusedTextColor = White,
                 unfocusedTextColor = White,
-                focusedBorderColor = LightBlue,
+                focusedBorderColor = Orange,
                 unfocusedBorderColor = Color.DarkGray,
-                cursorColor = LightBlue,
+                cursorColor = Orange,
                 focusedContainerColor = CardColor,
                 unfocusedContainerColor = CardColor
             )
@@ -668,7 +668,7 @@ fun SectionHeading(title: String) {
 
     Text(
         text = title,
-        color = LightBlue,
+        color = Orange,
         fontSize = 19.sp,
         fontWeight = FontWeight.Bold,
         fontFamily = FontFamily.Serif
@@ -696,14 +696,14 @@ fun ProfileDoneScreen(
 
         Text(
             text = "✓",
-            color = Blue,
+            color = Orange,
             fontSize = 65.sp,
             fontWeight = FontWeight.Bold
         )
 
         Text(
             text = "PROFILE SAVED!",
-            color = Blue,
+            color = Orange,
             fontSize = 26.sp,
             fontWeight = FontWeight.Bold
         )
@@ -768,7 +768,7 @@ fun ProfileDoneScreen(
                 .fillMaxWidth()
                 .height(55.dp),
             colors = ButtonDefaults.buttonColors(
-                containerColor = LightBlue,
+                containerColor = Orange,
                 contentColor = Color.Black
             ),
             shape = RoundedCornerShape(15.dp)

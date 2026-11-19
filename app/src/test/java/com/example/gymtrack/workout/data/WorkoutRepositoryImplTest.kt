@@ -1,9 +1,9 @@
 package com.example.gymtrack.workout.data
 
-import com.example.gymtrack.workout.data.repository.WorkoutRepositoryImpl
-import com.example.gymtrack.workout.domain.model.Weekday
-import com.example.gymtrack.workout.domain.model.WorkoutDayInput
-import com.example.gymtrack.workout.domain.repository.WorkoutDayUsageProvider
+import com.example.gymtrack.workout.WorkoutRepositoryImpl
+import com.example.gymtrack.workout.Weekday
+import com.example.gymtrack.workout.WorkoutDayInput
+import com.example.gymtrack.workout.WorkoutDayUsageProvider
 import com.example.gymtrack.workout.testutil.FakeWorkoutDao
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow

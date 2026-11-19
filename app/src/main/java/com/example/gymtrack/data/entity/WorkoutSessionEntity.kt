@@ -5,7 +5,7 @@ import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import com.example.gymtrack.workout.data.entity.WorkoutDayEntity
+import com.example.gymtrack.workout.WorkoutDayEntity
 
 /**
  * One performed workout (Person 4). History is preserved on purpose:

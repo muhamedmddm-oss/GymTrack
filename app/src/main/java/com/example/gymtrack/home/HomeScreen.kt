@@ -1,4 +1,4 @@
-
+//final version
 package com.example.gymtrack.home
 
 
@@ -31,6 +31,7 @@ import androidx.compose.material.icons.filled.FitnessCenter
 import androidx.compose.material.icons.filled.ShowChart
 import androidx.compose.material.icons.filled.Person
 
+
 private val Dark = Color(0xFF101010)
 private val CardColor = Color(0xFF202020)
 private val Orange = Color(0xFFFF8A00)
@@ -48,55 +49,27 @@ fun HomeScreen() {
     val viewModel: HomeViewModel = viewModel(
         factory = viewModelFactory {
             initializer {
-                HomeViewModel(GymTrackData.profiles(appContext))
+                HomeViewModel(GymTrackData.profiles(appContext), GymTrackData.sessions(appContext))
             }
         }
     )
 
     val profile by viewModel.profile.collectAsStateWithLifecycle()
+    val completedSessions by viewModel.completedSessions.collectAsStateWithLifecycle()
+    val weeklySessions by viewModel.weeklySessions.collectAsStateWithLifecycle()
+    val lastWorkout by viewModel.lastWorkout.collectAsStateWithLifecycle()
 
-    var selectedTab by remember {
-        mutableIntStateOf(0)
-    }
-
-    Scaffold(
-        containerColor = Dark,
-
-        bottomBar = {
-            BottomNavigationBar(
-                selectedTab = selectedTab,
-                onTabSelected = { selectedTab = it }
-            )
-        }
-
-    ) { paddingValues ->
-
-        when (selectedTab) {
-
-            0 -> HomeTab(
-                profile = profile,
-                modifier = Modifier.padding(paddingValues)
-            )
-
-            1 -> PlaceholderTab(
-                title = "Workouts",
-                subtitle = "Manage your workout plans",
-                modifier = Modifier.padding(paddingValues)
-            )
-
-            2 -> PlaceholderTab(
-                title = "Progress",
-                subtitle = "Track your fitness progress",
-                modifier = Modifier.padding(paddingValues)
-            )
-
-            3 -> PlaceholderTab(
-                title = "Profile",
-                subtitle = "Your personal information",
-                modifier = Modifier.padding(paddingValues)
-            )
-        }
-    }
+    // The shared navigation bar is owned by AppNavHost.
+    // This screen only displays Home content to prevent duplicate bars.
+    HomeTab(
+        profile = profile,
+        completedSessions = completedSessions,
+        weeklySessions = weeklySessions,
+        lastWorkout = lastWorkout,
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Dark)
+    )
 }
 
 // Bottom Navigation Bar
@@ -156,6 +129,9 @@ fun BottomNavigationBar(
 @Composable
 fun HomeTab(
     profile: UserProfileEntity?,
+    completedSessions: Int = 0,
+    weeklySessions: Int = 0,
+    lastWorkout: com.example.gymtrack.data.entity.WorkoutSessionEntity? = null,
     modifier: Modifier = Modifier
 ) {
 
@@ -209,40 +185,26 @@ fun HomeTab(
 
             StatCard(
                 title = "Weekly Workouts",
-                value = "2/3",
+                value = weeklySessions.toString(),
                 modifier = Modifier.weight(1f)
             )
 
             StatCard(
                 title = "Total Sessions",
-                value = "12",
+                value = completedSessions.toString(),
                 modifier = Modifier.weight(1f)
             )
         }
 
         Spacer(modifier = Modifier.height(28.dp))
 
-        SectionTitle(title = "Workout Days")
+        SectionTitle(title = "Workout Plans")
 
         Spacer(modifier = Modifier.height(12.dp))
-
-        WorkoutCard(
-            title = "Push Day",
-            subtitle = "Chest, Shoulders & Triceps"
-        )
-
-        Spacer(modifier = Modifier.height(10.dp))
-
-        WorkoutCard(
-            title = "Pull Day",
-            subtitle = "Back & Biceps"
-        )
-
-        Spacer(modifier = Modifier.height(10.dp))
-
-        WorkoutCard(
-            title = "Leg Day",
-            subtitle = "Legs & Abs"
+        Text(
+            text = "Open Workouts to view your saved plans and start a session.",
+            color = Gray,
+            fontSize = 14.sp
         )
 
         Spacer(modifier = Modifier.height(28.dp))
@@ -251,10 +213,14 @@ fun HomeTab(
 
         Spacer(modifier = Modifier.height(12.dp))
 
-        InfoCard(
-            title = "Push Day",
-            subtitle = "3 Exercises • 45 Minutes"
-        )
+        if (lastWorkout != null) {
+            InfoCard(
+                title = lastWorkout.dayName,
+                subtitle = "${lastWorkout.durationSeconds / 60} Minutes • ${lastWorkout.planName}"
+            )
+        } else {
+            Text("No completed workouts yet.", color = Gray, fontSize = 14.sp)
+        }
 
         Spacer(modifier = Modifier.height(20.dp))
     }
@@ -500,3 +466,28 @@ private fun formatNumber(value: Double): String =
         value.toInt().toString()
     else
         value.toString()
+
+
+/** Profile tab backed by the same Room profile created during onboarding. */
+@Composable
+fun ProfileScreen() {
+    val context = LocalContext.current.applicationContext
+    val viewModel: HomeViewModel = viewModel(
+        factory = viewModelFactory {
+            initializer { HomeViewModel(GymTrackData.profiles(context), GymTrackData.sessions(context)) }
+        }
+    )
+    val profile by viewModel.profile.collectAsStateWithLifecycle()
+    Column(
+        modifier = Modifier.fillMaxSize().background(Dark).verticalScroll(rememberScrollState()).padding(20.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+        Text("Your Profile", color = White, fontSize = 26.sp, fontWeight = FontWeight.Bold)
+        if (profile == null) {
+            Text("No profile has been saved yet.", color = Gray)
+        } else {
+            Text(profile!!.name, color = Orange, fontSize = 20.sp, fontWeight = FontWeight.Bold)
+            ProfileStats(profile!!)
+        }
+    }
+}

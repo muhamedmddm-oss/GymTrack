@@ -1,11 +1,11 @@
 package com.example.gymtrack.workout.testutil
 
-import com.example.gymtrack.workout.domain.model.Weekday
-import com.example.gymtrack.workout.domain.model.WorkoutDay
-import com.example.gymtrack.workout.domain.model.WorkoutDayDetails
-import com.example.gymtrack.workout.domain.model.WorkoutDayInput
-import com.example.gymtrack.workout.domain.model.WorkoutPlan
-import com.example.gymtrack.workout.domain.repository.WorkoutRepository
+import com.example.gymtrack.workout.Weekday
+import com.example.gymtrack.workout.WorkoutDay
+import com.example.gymtrack.workout.WorkoutDayDetails
+import com.example.gymtrack.workout.WorkoutDayInput
+import com.example.gymtrack.workout.WorkoutPlan
+import com.example.gymtrack.workout.WorkoutRepository
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.map
 

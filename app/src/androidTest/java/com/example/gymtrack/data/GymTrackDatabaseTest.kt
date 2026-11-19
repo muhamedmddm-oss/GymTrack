@@ -10,11 +10,11 @@ import com.example.gymtrack.data.entity.SessionSetEntity
 import com.example.gymtrack.data.entity.UserProfileEntity
 import com.example.gymtrack.data.entity.WorkoutSessionEntity
 import com.example.gymtrack.data.repository.UserProfileRepository
-import com.example.gymtrack.workout.data.entity.WorkoutDayEntity
-import com.example.gymtrack.workout.data.entity.WorkoutPlanEntity
-import com.example.gymtrack.workout.data.repository.WorkoutRepositoryImpl
-import com.example.gymtrack.workout.domain.model.Weekday
-import com.example.gymtrack.workout.domain.model.WorkoutDayInput
+import com.example.gymtrack.workout.WorkoutDayEntity
+import com.example.gymtrack.workout.WorkoutPlanEntity
+import com.example.gymtrack.workout.WorkoutRepositoryImpl
+import com.example.gymtrack.workout.Weekday
+import com.example.gymtrack.workout.WorkoutDayInput
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.junit.After

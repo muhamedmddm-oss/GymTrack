@@ -43,10 +43,10 @@ import com.example.gymtrack.data.dao.SessionExerciseWithSets
 import com.example.gymtrack.data.dao.SessionWithDetails
 import com.example.gymtrack.data.entity.SessionSetEntity
 import com.example.gymtrack.workout.WorkoutModule
-import com.example.gymtrack.workout.presentation.components.OrangeButton
-import com.example.gymtrack.workout.presentation.components.SectionLabel
-import com.example.gymtrack.workout.presentation.components.WorkoutTopBar
-import com.example.gymtrack.workout.presentation.theme.WorkoutColors
+import com.example.gymtrack.workout.OrangeButton
+import com.example.gymtrack.workout.SectionLabel
+import com.example.gymtrack.workout.WorkoutTopBar
+import com.example.gymtrack.workout.WorkoutColors
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

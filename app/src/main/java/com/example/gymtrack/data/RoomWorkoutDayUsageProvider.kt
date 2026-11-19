@@ -2,7 +2,7 @@ package com.example.gymtrack.data
 
 import com.example.gymtrack.data.dao.ExerciseDao
 import com.example.gymtrack.data.dao.WorkoutSessionDao
-import com.example.gymtrack.workout.domain.repository.WorkoutDayUsageProvider
+import com.example.gymtrack.workout.WorkoutDayUsageProvider
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 

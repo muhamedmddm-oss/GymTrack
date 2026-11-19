@@ -68,12 +68,12 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.gymtrack.activeworkout.timer.formatElapsedTime
 import com.example.gymtrack.data.GymTrackData
 import com.example.gymtrack.workout.WorkoutModule
-import com.example.gymtrack.workout.presentation.components.DeleteConfirmationDialog
-import com.example.gymtrack.workout.presentation.components.OrangeButton
-import com.example.gymtrack.workout.presentation.components.SectionLabel
-import com.example.gymtrack.workout.presentation.components.WorkoutTopBar
-import com.example.gymtrack.workout.presentation.theme.WorkoutColors
-import com.example.gymtrack.workout.presentation.theme.workoutTextFieldColors
+import com.example.gymtrack.workout.DeleteConfirmationDialog
+import com.example.gymtrack.workout.OrangeButton
+import com.example.gymtrack.workout.SectionLabel
+import com.example.gymtrack.workout.WorkoutTopBar
+import com.example.gymtrack.workout.WorkoutColors
+import com.example.gymtrack.workout.workoutTextFieldColors
 
 /** All the things the screen can ask the ViewModel to do (keeps the composable signatures short). */
 class ActiveWorkoutActions(

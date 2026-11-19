@@ -16,10 +16,78 @@ class WorkoutSessionRepository(
     // ---- Running a workout ----
 
     /** Starts a session. [dayName]/[planName] are copied so history stays readable later. */
-    suspend fun startSession(dayId: Long?, dayName: String, planName: String): Long =
-        dao.insertSession(
-            WorkoutSessionEntity(workoutDayId = dayId, dayName = dayName, planName = planName, startTime = clock())
+    suspend fun startSession(
+        dayId: Long?,
+        dayName: String,
+        planName: String,
+        startRunning: Boolean = false
+    ): Long {
+        val now = clock()
+        return dao.insertSession(
+            WorkoutSessionEntity(
+                workoutDayId = dayId,
+                dayName = dayName,
+                planName = planName,
+                startTime = now,
+                // Active Workout: the timer starts together with the session.
+                runningSinceMillis = if (startRunning) now else null
+            )
         )
+    }
+
+    /** The unfinished workout of a day (so the Active Workout screen can resume it), or null. */
+    suspend fun getUnfinishedSessionForDay(dayId: Long): WorkoutSessionEntity? =
+        dao.getUnfinishedSessionForDay(dayId)
+
+    suspend fun getSessionDetails(sessionId: Long): SessionWithDetails? = dao.getSessionWithDetails(sessionId)
+
+    /** Stores the timer so the elapsed time survives rotation, process death and closing the app. */
+    suspend fun saveTimerState(sessionId: Long, accumulatedMillis: Long, runningSinceMillis: Long?) =
+        dao.updateTimerState(sessionId, accumulatedMillis, runningSinceMillis)
+
+    /** Adds the planned exercises of a day (with their empty sets) to a session in one transaction. */
+    suspend fun addExercisesWithSets(sessionId: Long, exercises: List<SessionExerciseDraft>) =
+        dao.addExercisesWithSets(sessionId, exercises)
+
+    /** Adds one exercise with [setCount] empty sets. Returns the new session-exercise id. */
+    suspend fun addExerciseWithSets(
+        sessionId: Long,
+        exerciseId: Long?,
+        exerciseName: String,
+        orderIndex: Int,
+        sets: List<SessionSetEntity>
+    ): Long = dao.insertExerciseWithSets(
+        SessionExerciseEntity(
+            sessionId = sessionId,
+            exerciseId = exerciseId,
+            exerciseName = exerciseName,
+            orderIndex = orderIndex
+        ),
+        sets
+    )
+
+    suspend fun getSets(sessionExerciseId: Long): List<SessionSetEntity> = dao.getSets(sessionExerciseId)
+
+    suspend fun updateSets(sets: List<SessionSetEntity>) = dao.updateSets(sets)
+
+    suspend fun deleteSet(setId: Long) = dao.deleteSet(setId)
+
+    /** Removes an exercise (and, through CASCADE, its sets) from a session. */
+    suspend fun removeExerciseFromSession(sessionExerciseId: Long) = dao.deleteSessionExercise(sessionExerciseId)
+
+    /**
+     * Ends the session with the pause-aware duration measured by the Active Workout timer
+     * (unlike [finishSession], which would count pauses as workout time).
+     */
+    suspend fun finishSessionWithDuration(sessionId: Long, durationMillis: Long) {
+        val safeMillis = durationMillis.coerceAtLeast(0)
+        dao.markFinished(
+            sessionId = sessionId,
+            endTime = clock(),
+            durationSeconds = safeMillis / 1000,
+            accumulatedMillis = safeMillis
+        )
+    }
 
     /** Adds an exercise to a running session. Returns the session-exercise id. */
     suspend fun addExerciseToSession(

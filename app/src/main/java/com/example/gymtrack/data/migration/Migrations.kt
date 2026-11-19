@@ -102,3 +102,15 @@ val MIGRATION_2_3 = object : Migration(2, 3) {
         db.execSQL("ALTER TABLE `user_profile` ADD COLUMN `age` INTEGER")
     }
 }
+
+/**
+ * v3 -> v4 (Active Workout timer): the timer state of a running workout is stored on its session row,
+ * so a workout (and its elapsed time) can be resumed after the app was closed.
+ * Existing sessions keep working: accumulatedMillis starts at 0 and runningSinceMillis at NULL.
+ */
+val MIGRATION_3_4 = object : Migration(3, 4) {
+    override fun migrate(db: SupportSQLiteDatabase) {
+        db.execSQL("ALTER TABLE `workout_sessions` ADD COLUMN `accumulatedMillis` INTEGER NOT NULL DEFAULT 0")
+        db.execSQL("ALTER TABLE `workout_sessions` ADD COLUMN `runningSinceMillis` INTEGER")
+    }
+}

@@ -32,11 +32,13 @@ object WorkoutRoutes {
  *
  * Person 3: pass [onAddExercises] and/or [exerciseContent] to plug your exercise screens into
  * the day-details screen.
+ * Person 4: pass [onStartWorkout] to show the "Start Workout" button that opens the Active Workout screen.
  */
 fun NavGraphBuilder.workoutNavGraph(
     navController: NavController,
     onAddExercises: ((dayId: Long) -> Unit)? = null,
-    exerciseContent: (@Composable (dayId: Long) -> Unit)? = null
+    exerciseContent: (@Composable (dayId: Long) -> Unit)? = null,
+    onStartWorkout: ((dayId: Long) -> Unit)? = null
 ) {
     composable(WorkoutRoutes.PLANS) {
         WorkoutPlansRoute(
@@ -79,7 +81,8 @@ fun NavGraphBuilder.workoutNavGraph(
                 onBack = { navController.popBackStack() },
                 onEditPlan = { planId -> navController.navigate(WorkoutRoutes.editPlan(planId)) },
                 onAddExercises = onAddExercises,
-                exerciseContent = exerciseContent
+                exerciseContent = exerciseContent,
+                onStartWorkout = onStartWorkout
             )
         }
     }

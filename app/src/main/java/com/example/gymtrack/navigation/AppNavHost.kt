@@ -15,6 +15,8 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.gymtrack.GymSetupApp
+import com.example.gymtrack.activeworkout.ActiveWorkoutRoutes
+import com.example.gymtrack.activeworkout.activeWorkoutNavGraph
 import com.example.gymtrack.home.HomeScreen
 import com.example.gymtrack.workout.navigation.WorkoutRoutes
 import com.example.gymtrack.workout.navigation.workoutNavGraph
@@ -66,8 +68,17 @@ fun AppNavHost() {
         }
 
         // Person 2 – Workout Schedule Management
-        workoutNavGraph(navController)
+        // Person 4 hooks in through onStartWorkout: Workout Day Details -> Active Workout.
+        // Person 3: also pass onAddExercises = { dayId -> ... } once your screens exist.
+        workoutNavGraph(
+            navController,
+            onStartWorkout = { dayId -> navController.navigate(ActiveWorkoutRoutes.activeWorkout(dayId)) }
+        )
 
-        // Person 3: workoutNavGraph(navController, onAddExercises = { dayId -> ... }) once your screens exist.
+        // Person 4 – Active Workout & Timer, then Workout Summary (Done -> back to Home).
+        activeWorkoutNavGraph(
+            navController,
+            onSummaryDone = { navController.popBackStack(AppRoutes.HOME, inclusive = false) }
+        )
     }
 }

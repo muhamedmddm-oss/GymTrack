@@ -71,6 +71,28 @@ abstract class WorkoutSessionDao {
     @Query("SELECT COUNT(*) FROM workout_sessions WHERE workoutDayId = :dayId")
     abstract suspend fun countForDay(dayId: Long): Int
 
+    // ---- Active Workout (Person 4): resume, timer state, finishing ----
+
+    /** The workout of [dayId] that was started but never finished (used to resume it). */
+    @Query(
+        "SELECT * FROM workout_sessions WHERE workoutDayId = :dayId AND endTime IS NULL " +
+            "ORDER BY startTime DESC LIMIT 1"
+    )
+    abstract suspend fun getUnfinishedSessionForDay(dayId: Long): WorkoutSessionEntity?
+
+    @Query(
+        "UPDATE workout_sessions SET accumulatedMillis = :accumulatedMillis, " +
+            "runningSinceMillis = :runningSinceMillis WHERE id = :sessionId"
+    )
+    abstract suspend fun updateTimerState(sessionId: Long, accumulatedMillis: Long, runningSinceMillis: Long?)
+
+    /** Closes a session with the real (pause-aware) duration and stops its timer. */
+    @Query(
+        "UPDATE workout_sessions SET endTime = :endTime, durationSeconds = :durationSeconds, " +
+            "accumulatedMillis = :accumulatedMillis, runningSinceMillis = NULL WHERE id = :sessionId"
+    )
+    abstract suspend fun markFinished(sessionId: Long, endTime: Long, durationSeconds: Long, accumulatedMillis: Long)
+
     // ---- Exercises and sets of a session ----
 
     @Insert
@@ -84,6 +106,16 @@ abstract class WorkoutSessionDao {
 
     @Update
     abstract suspend fun updateSet(set: SessionSetEntity)
+
+    @Update
+    abstract suspend fun updateSets(sets: List<SessionSetEntity>)
+
+    @Query("DELETE FROM session_sets WHERE id = :setId")
+    abstract suspend fun deleteSet(setId: Long)
+
+    /** Removes one exercise from a session; its sets are removed by the CASCADE foreign key. */
+    @Query("DELETE FROM session_exercises WHERE id = :sessionExerciseId")
+    abstract suspend fun deleteSessionExercise(sessionExerciseId: Long)
 
     @Query("SELECT * FROM session_exercises WHERE sessionId = :sessionId ORDER BY orderIndex, id")
     abstract suspend fun getSessionExercises(sessionId: Long): List<SessionExerciseEntity>
@@ -117,5 +149,21 @@ abstract class WorkoutSessionDao {
             insertSets(draft.sets.map { it.copy(sessionExerciseId = exerciseId) })
         }
         return sessionId
+    }
+
+    /** Inserts one exercise and its sets atomically. Returns the new session-exercise id. */
+    @Transaction
+    open suspend fun insertExerciseWithSets(exercise: SessionExerciseEntity, sets: List<SessionSetEntity>): Long {
+        val exerciseId = insertSessionExercise(exercise)
+        insertSets(sets.map { it.copy(sessionExerciseId = exerciseId) })
+        return exerciseId
+    }
+
+    /** Adds several exercises (with their sets) to a running session in ONE transaction. */
+    @Transaction
+    open suspend fun addExercisesWithSets(sessionId: Long, exercises: List<SessionExerciseDraft>) {
+        exercises.forEach { draft ->
+            insertExerciseWithSets(draft.exercise.copy(sessionId = sessionId), draft.sets)
+        }
     }
 }

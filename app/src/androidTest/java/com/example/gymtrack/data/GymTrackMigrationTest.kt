@@ -10,6 +10,7 @@ import com.example.gymtrack.data.entity.ExerciseEntity
 import com.example.gymtrack.data.entity.UserProfileEntity
 import com.example.gymtrack.data.migration.MIGRATION_1_2
 import com.example.gymtrack.data.migration.MIGRATION_2_3
+import com.example.gymtrack.data.migration.MIGRATION_3_4
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals
@@ -59,7 +60,7 @@ class GymTrackMigrationTest {
 
     private fun openMigrated(): GymTrackDatabase =
         Room.databaseBuilder(context, GymTrackDatabase::class.java, dbName)
-            .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
+            .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4)
             .build()
 
     @Test

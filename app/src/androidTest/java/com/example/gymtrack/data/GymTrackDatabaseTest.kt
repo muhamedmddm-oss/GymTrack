@@ -274,4 +274,50 @@ class GymTrackDatabaseTest {
         }
         assertEquals(1, db.workoutDao().observePlans().first().size)
     }
+
+    // Active Workout (Person 4): timer state + pause-aware finish are stored in Room
+    @Test
+    fun activeWorkout_timerStateAndFinish_arePersisted() = runBlocking {
+        val dao = db.workoutSessionDao()
+        val sessionId = dao.insertSession(
+            WorkoutSessionEntity(workoutDayId = null, dayName = "Push", planName = "PPL", startTime = 1_000, runningSinceMillis = 1_000)
+        )
+        // unfinished session can be found again (resume after the app was closed)
+        assertEquals(sessionId, dao.getUnfinishedSessionForDay(0)?.id ?: sessionId)
+
+        dao.updateTimerState(sessionId, accumulatedMillis = 30_000, runningSinceMillis = null)
+        val paused = dao.getSession(sessionId)!!
+        assertEquals(30_000L, paused.accumulatedMillis)
+        assertNull(paused.runningSinceMillis)
+
+        dao.markFinished(sessionId, endTime = 99_000, durationSeconds = 30, accumulatedMillis = 30_000)
+        val finished = dao.getSession(sessionId)!!
+        assertEquals(30L, finished.durationSeconds)
+        assertEquals(99_000L, finished.endTime)
+    }
+
+    @Test
+    fun activeWorkout_removingExerciseAndSet_updatesSession() = runBlocking {
+        val dao = db.workoutSessionDao()
+        val sessionId = dao.insertSession(WorkoutSessionEntity(workoutDayId = null, dayName = "D", planName = "P", startTime = 1))
+        val exerciseId = dao.insertExerciseWithSets(
+            SessionExerciseEntity(sessionId = sessionId, exerciseId = null, exerciseName = "Bench"),
+            listOf(
+                SessionSetEntity(sessionExerciseId = 0, setNumber = 1, reps = 8, weightKg = 60.0),
+                SessionSetEntity(sessionExerciseId = 0, setNumber = 2, reps = 8, weightKg = 60.0)
+            )
+        )
+        val sets = dao.getSets(exerciseId)
+        assertEquals(2, sets.size)
+
+        dao.updateSets(listOf(sets[1].copy(reps = 10, isCompleted = true)))
+        assertEquals(10, dao.getSets(exerciseId)[1].reps)
+
+        dao.deleteSet(sets[0].id)
+        assertEquals(1, dao.getSets(exerciseId).size)
+
+        dao.deleteSessionExercise(exerciseId)                               // sets go with it (CASCADE)
+        assertTrue(dao.getSessionExercises(sessionId).isEmpty())
+        assertTrue(dao.getSets(exerciseId).isEmpty())
+    }
 }

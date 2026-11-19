@@ -48,6 +48,10 @@ import com.example.gymtrack.workout.presentation.viewmodel.WorkoutDayDetailsView
  *    When null, a simple placeholder with the exercise count is shown.
  *  - [onAddExercises]: called with the day id when the user taps "Add Exercises". When null the
  *    button is hidden (until your screen exists).
+ *
+ * INTEGRATION POINT FOR PERSON 4 (active workout):
+ *  - [onStartWorkout]: called with the day id when the user taps "Start Workout". When null the
+ *    button is hidden.
  */
 @Composable
 fun WorkoutDayDetailsRoute(
@@ -55,7 +59,8 @@ fun WorkoutDayDetailsRoute(
     onBack: () -> Unit,
     onEditPlan: (planId: Long) -> Unit,
     onAddExercises: ((dayId: Long) -> Unit)? = null,
-    exerciseContent: (@Composable (dayId: Long) -> Unit)? = null
+    exerciseContent: (@Composable (dayId: Long) -> Unit)? = null,
+    onStartWorkout: ((dayId: Long) -> Unit)? = null
 ) {
     val appContext = LocalContext.current.applicationContext
     val viewModel: WorkoutDayDetailsViewModel = viewModel(
@@ -69,6 +74,7 @@ fun WorkoutDayDetailsRoute(
         state = state,
         onBack = onBack,
         onEditPlan = onEditPlan,
+        onStartWorkout = onStartWorkout?.let { callback -> { callback(dayId) } },
         exerciseSection = { details ->
             if (exerciseContent != null) {
                 exerciseContent(details.day.id)
@@ -87,6 +93,7 @@ fun WorkoutDayDetailsScreen(
     state: WorkoutDayDetailsUiState,
     onBack: () -> Unit,
     onEditPlan: (planId: Long) -> Unit,
+    onStartWorkout: (() -> Unit)? = null,
     exerciseSection: @Composable (WorkoutDayDetails) -> Unit
 ) {
     Scaffold(
@@ -129,6 +136,14 @@ fun WorkoutDayDetailsScreen(
                     verticalArrangement = Arrangement.spacedBy(20.dp)
                 ) {
                     DayHeaderCard(details)
+                    // Person 4: entry point of the Active Workout screen (hidden until it is wired up).
+                    if (onStartWorkout != null) {
+                        OrangeButton(
+                            text = "Start Workout",
+                            onClick = onStartWorkout,
+                            modifier = Modifier.fillMaxWidth()
+                        )
+                    }
                     Column {
                         SectionLabel("Exercises")
                         Spacer(modifier = Modifier.height(10.dp))

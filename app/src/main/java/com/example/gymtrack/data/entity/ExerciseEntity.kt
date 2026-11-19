@@ -6,13 +6,7 @@ import androidx.room.Index
 import androidx.room.PrimaryKey
 import com.example.gymtrack.workout.WorkoutDayEntity
 
-/**
- * An exercise planned for a workout day (Person 3). [sets], [reps] and [weightKg] are the TARGETS;
- * what the user really did lives in [SessionExerciseEntity] / [SessionSetEntity].
- *
- * RESTRICT: a day that still has exercises can never be physically deleted. Person 2's repository
- * archives such days instead, so this is only a safety net.
- */
+
 @Entity(
     tableName = "exercises",
     foreignKeys = [

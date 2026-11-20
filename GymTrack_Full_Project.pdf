@@ -1,0 +1,645 @@
+%PDF-1.4
+%âãÏÓ
+1 0 obj
+<<
+/Producer (pypdf)
+>>
+endobj
+2 0 obj
+<<
+/Type /Pages
+/Count 2
+/Kids [ 4 0 R 14 0 R ]
+>>
+endobj
+3 0 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+>>
+endobj
+4 0 obj
+<<
+/Contents 5 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font <<
+/F1 6 0 R
+/F1-0 7 0 R
+/F2 8 0 R
+/F2-0 9 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+/ProcSet [ /ImageB /ImageC /ImageI /PDF /Text ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Annots [ ]
+/Parent 2 0 R
+>>
+endobj
+5 0 obj
+<<
+/Length 18049
+>>
+stream
+q
+1 0 0 1 0 0 cm  BT /F1 12 Tf 14.4 TL ET
+q
+BT /F2 16.5 Tf 19.8 TL ET
+BT 1 0 0 1 116.6542 757.44 Tm (GymTrack: A Gym Workout Planner and Tracker) Tj T* ET
+BT /F1 8.7 Tf 10.44 TL ET
+BT 1 0 0 1 106.5525 740.44 Tm (An Android Application for Member Profiles, Workout Planning, Session Tracking, and Progress Review) Tj T* ET
+BT /F2 7.1 Tf 8.52 TL ET
+BT 1 0 0 1 103.996 715.44 Tm (Name Surname) Tj T* ET
+BT /F1 7.1 Tf 8.52 TL ET
+BT 1 0 0 1 93.74005 705.44 Tm (Department, University) Tj T* ET
+BT 1 0 0 1 109.3246 695.44 Tm (City, Country) Tj T* ET
+BT 1 0 0 1 96.6475 685.44 Tm (email@example.com) Tj T* ET
+BT /F2 7.1 Tf 8.52 TL ET
+BT 1 0 0 1 280.156 715.44 Tm (Name Surname) Tj T* ET
+BT /F1 7.1 Tf 8.52 TL ET
+BT 1 0 0 1 269.9001 705.44 Tm (Department, University) Tj T* ET
+BT 1 0 0 1 285.4846 695.44 Tm (City, Country) Tj T* ET
+BT 1 0 0 1 272.8075 685.44 Tm (email@example.com) Tj T* ET
+BT /F2 7.1 Tf 8.52 TL ET
+BT 1 0 0 1 456.316 715.44 Tm (Name Surname) Tj T* ET
+BT /F1 7.1 Tf 8.52 TL ET
+BT 1 0 0 1 446.06 705.44 Tm (Department, University) Tj T* ET
+BT 1 0 0 1 461.6445 695.44 Tm (City, Country) Tj T* ET
+BT 1 0 0 1 448.9675 685.44 Tm (email@example.com) Tj T* ET
+BT /F3 6.5 Tf 7.8 TL ET
+BT 1 0 0 1 304.375 14.4 Tm (1) Tj T* ET
+Q
+q
+1 0 0 1 41.76 675.14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9 Tf 10.3 TL (ABSTRACT) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 545.64 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 120.3 Tm /F3 7.2 Tf 8.5 TL 1.6128 Tw (GymTrack is an Android application that supports gym members through the main) Tj T* 0 Tw 2.47608 Tw (stages of a workout routine: initial profile setup, workout-plan creation, exercise) Tj T* 0 Tw 1.085891 Tw (scheduling, live workout execution, and progress review. It is implemented in Kotlin) Tj T* 0 Tw 1.1796 Tw (with Jetpack Compose and uses a shared Room database to persist member profiles,) Tj T* 0 Tw .47736 Tw (workout plans and days, planned exercises, workout sessions, performed exercises, and) Tj T* 0 Tw 1.325455 Tw (set records. The Home screen presents member information and recent activity. The) Tj T* 0 Tw .5298 Tw (Workout Schedule module lets users create and edit plans containing training days and) Tj T* 0 Tw 2.415927 Tw (exercises. During an active session, users can record repetitions and weights for) Tj T* 0 Tw .364985 Tw (individual sets, mark sets complete, control the workout timer, and finish or discard the) Tj T* 0 Tw 1.7504 Tw (session. The Statistics screen derives summaries from completed database sessions,) Tj T* 0 Tw 2.148 Tw (including session count, completed sets and repetitions, training volume, duration,) Tj T* 0 Tw .507927 Tw (weekly activity, frequently trained exercises, and the heaviest recorded set. The project) Tj T* 0 Tw 3.3426 Tw (uses feature-oriented MVVM, repositories, Kotlin Coroutines, Flow, and Room) Tj T* 0 Tw 1.0176 Tw (transactions. This paper documents the implemented application, its architecture, data) Tj T* 0 Tw (model, user workflow, and current scope.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 519.74 cm
+q
+BT 1 0 0 1 0 16.5 Tm 7.7 TL /F4 6.6 Tf 0 0 0 rg (CCS CONCEPTS) Tj /F3 6.6 Tf  T* (\177 Human-centered computing ) Tj /F5 6.6 Tf 7.7 TL (\256) Tj /F3 6.6 Tf 7.7 TL ( User interface design; \177 Information systems ) Tj /F5 6.6 Tf 7.7 TL (\256) Tj /F3 6.6 Tf 7.7 TL ( Information) Tj T* (systems applications; \177 Software and its engineering ) Tj /F5 6.6 Tf 7.7 TL (\256) Tj /F3 6.6 Tf 7.7 TL ( Software architectures.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 494.84 cm
+q
+BT 1 0 0 1 0 16.5 Tm 7.7 TL /F4 6.6 Tf 0 0 0 rg (KEYWORDS) Tj /F3 6.6 Tf  T* (GymTrack, Android, Kotlin, Jetpack Compose, Room Database, MVVM, Workout Planner,) Tj T* (Fitness Tracking, Training Statistics) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 462.24 cm
+q
+BT 1 0 0 1 0 24.2 Tm 7.7 TL /F4 6.6 Tf 0 0 0 rg (ACM Reference Format:) Tj /F3 6.6 Tf  T* (Project Team. 2026. ) Tj /F6 6.6 Tf (GymTrack: A Gym Workout Planner and Tracker: An Android Application) Tj T* (for Member Profiles, Workout Planning, Session Tracking, and Progress Review.) Tj /F3 6.6 Tf ( Course Project) Tj T* (Documentation. ACM-style two-page report.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 447.64 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9 Tf 10.3 TL (1 INTRODUCTION) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 386.14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.3 Tm /F3 7.2 Tf 8.5 TL 1.296 Tw (Maintaining a structured fitness routine requires more than choosing exercises. Gym) Tj T* 0 Tw .0312 Tw (members need to organize training days, record the work completed during each session,) Tj T* 0 Tw .33768 Tw (and review activity to understand consistency and performance. GymTrack brings these) Tj T* 0 Tw .4134 Tw (tasks into one Android application. Its central workflow connects a saved workout plan) Tj T* 0 Tw .2808 Tw (with an active training session and a history-based progress screen. The supplied source) Tj T* 0 Tw 1.612246 Tw (is local-first: it uses Room for structured persistence and does not define a remote) Tj T* 0 Tw (backend, cloud synchronization, or an account service.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 371.54 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9 Tf 10.3 TL (2 APPLICATION OVERVIEW) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 359.74 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.1 Tm /F2 7.9 Tf 9 TL (2.1 Onboarding and Member Profile) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 298.94 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.3 Tm /F3 7.2 Tf 8.5 TL 6.01488 Tw (The application begins with a setup flow containing a splash screen,) Tj T* 0 Tw .77688 Tw (welcome/onboarding content, profile setup, and a completion screen. The profile form) Tj T* 0 Tw 1.842545 Tw (captures the member's name, age, body weight, height, and selected training days.) Tj T* 0 Tw .742909 Tw (Profile values are stored in Android SharedPreferences and synchronized to the Room) Tj T* 0 Tw .9288 Tw (profile repository. The Room entity stores the name, optional age, height and weight,) Tj T* 0 Tw 1.395771 Tw (training-days-per-week count, and creation/update timestamps. The profile repository) Tj T* 0 Tw (exposes the current profile as a Flow so dependent screens can observe changes.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 287.14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.1 Tm /F2 7.9 Tf 9 TL (2.2 Home Screen) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 234.84 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 43.8 Tm /F3 7.2 Tf 8.5 TL .0144 Tw (The Home screen greets the member and displays profile information when available. Its) Tj T* 0 Tw -0.075927 Tw (activity area shows workouts completed in the recent seven-day window, total completed) Tj T* 0 Tw .888923 Tw (sessions, and the last completed workout with its day name, plan name, and recorded) Tj T* 0 Tw .522982 Tw (duration. It also directs users to saved workout plans. HomeViewModel obtains profile) Tj T* 0 Tw .360655 Tw (and activity values from the profile and workout-session repositories. The Home screen) Tj T* 0 Tw (is a summary and navigation entry point rather than a separate source of workout data.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 223.04 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.1 Tm /F2 7.9 Tf 9 TL (2.3 Workout Schedule and Exercise Planning) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 153.74 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 60.8 Tm /F3 7.2 Tf 8.5 TL .898457 Tw (Users can create, edit, and delete workout plans. A plan contains one or more named) Tj T* 0 Tw .811938 Tw (training days, with a maximum of seven days and unique weekdays within each plan.) Tj T* 0 Tw .337292 Tw (Each day can contain ordered exercises with a name, target set count, target repetitions,) Tj T* 0 Tw 1.0296 Tw (optional target weight, and notes. Schedule screens display plans and day details and) Tj T* 0 Tw 1.168457 Tw (provide actions to edit a plan or start a workout. Validation checks plan names, day) Tj T* 0 Tw .491815 Tw (names, day counts, and weekday uniqueness. When a day or plan is already referenced) Tj T* 0 Tw .3792 Tw (by exercises or session history, repository logic archives it instead of deleting historical) Tj T* 0 Tw (records.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 141.94 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.1 Tm /F2 7.9 Tf 9 TL (2.4 Active Workout and Session Summary) Tj T* ET
+Q
+Q
+q
+1 0 0 1 41.76 64.14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 69.3 Tm /F3 7.2 Tf 8.5 TL .54 Tw (Starting a workout creates a session linked to the selected workout day and copies that) Tj T* 0 Tw .6732 Tw (day's planned exercises and target sets into session records. The active screen displays) Tj T* 0 Tw .7302 Tw (exercise and set details. Users can edit actual repetitions and weights, mark individual) Tj T* 0 Tw 2.4318 Tw (sets complete, add or remove exercises and sets, and see progress calculated as) Tj T* 0 Tw .595938 Tw (completed sets divided by all sets. A timer supports start, pause, resume, and persisted) Tj T* 0 Tw .11712 Tw (elapsed time. If an unfinished session exists for the same workout day, the app reloads it) Tj T* 0 Tw .468514 Tw (rather than creating a duplicate. Finishing stores the end time and duration and opens a) Tj T* 0 Tw .31608 Tw (summary containing exercise count, completed exercises, total sets, completed sets, and) Tj T* 0 Tw (training volume from completed sets. A user can also discard an active session.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 676.44 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.1 Tm /F2 7.9 Tf 9 TL (2.5 Progress and Statistics) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 607.14 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 60.8 Tm /F3 7.2 Tf 8.5 TL .428123 Tw (The Progress screen observes session details from Room and offers four filters: 7 days,) Tj T* 0 Tw 1.938343 Tw (30 days, 3 months, and all time. For completed sessions in the selected range, it) Tj T* 0 Tw 1.2832 Tw (calculates session count, exercises, completed sets, repetitions, training volume, total) Tj T* 0 Tw .4284 Tw (duration, and average duration. Training volume is the sum of repetitions multiplied by) Tj T* 0 Tw .5142 Tw (recorded weight for completed sets; a missing weight contributes zero. The screen also) Tj T* 0 Tw .7776 Tw (shows recent weekly workout-frequency and training-volume bar charts, the five most) Tj T* 0 Tw .3996 Tw (frequently recorded exercises, and the heaviest recorded set when a weight is available.) Tj T* 0 Tw (An empty-state message appears when no completed workouts exist.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 592.54 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9 Tf 10.3 TL (3 SYSTEM ARCHITECTURE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 514.04 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 69.3 Tm /F3 7.2 Tf 8.5 TL .6384 Tw (GymTrack uses Kotlin, Jetpack Compose, Material 3, Navigation Compose, AndroidX) Tj T* 0 Tw .848571 Tw (Lifecycle, Kotlin Coroutines/Flow, and Room. MainActivity applies GymTrackTheme) Tj T* 0 Tw 3.2176 Tw (and launches one shared AppNavHost. The bottom navigation connects Home,) Tj T* 0 Tw 2.6184 Tw (Workouts, Progress, and Profile. Feature packages contain Compose screens and) Tj T* 0 Tw 1.24 Tw (ViewModels; repositories mediate between UI state and Room DAOs. Workout-plan) Tj T* 0 Tw .468 Tw (logic is grouped in the workout feature, while active-session and statistics functionality) Tj T* 0 Tw .87624 Tw (have dedicated packages. StateFlow and Flow provide observable state, and Compose) Tj T* 0 Tw 1.415127 Tw (collects state with lifecycle awareness. Room transactions group related inserts so a) Tj T* 0 Tw (session, its exercises, and set records are stored consistently.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 499.44 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9 Tf 10.3 TL (4 DATABASE DESIGN) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 403.94 cm
+q
+BT 1 0 0 1 0 86.3 Tm 1.859262 Tw 8.5 TL /F3 7.2 Tf 0 0 0 rg (The shared database is named ) Tj /F6 7.2 Tf (gymtrack.db) Tj /F3 7.2 Tf ( and is declared as Room version 4. It) Tj T* 0 Tw 7.18848 Tw (contains seven entities: ) Tj /F6 7.2 Tf (UserProfileEntity) Tj /F3 7.2 Tf ( \(user_profile\), ) Tj /F6 7.2 Tf (WorkoutPlanEntity) Tj /F3 7.2 Tf  T* 0 Tw 5.8428 Tw (\(workout_plans\), ) Tj /F6 7.2 Tf (WorkoutDayEntity) Tj /F3 7.2 Tf ( \(workout_days\), ) Tj /F6 7.2 Tf (ExerciseEntity) Tj /F3 7.2 Tf ( \(exercises\),) Tj T* 0 Tw 2.8512 Tw /F6 7.2 Tf (WorkoutSessionEntity) Tj /F3 7.2 Tf ( \(workout_sessions\), ) Tj /F6 7.2 Tf (SessionExerciseEntity) Tj /F3 7.2 Tf ( \(session_exercises\),) Tj T* 0 Tw .0126 Tw (and ) Tj /F6 7.2 Tf (SessionSetEntity) Tj /F3 7.2 Tf ( \(session_sets\). A plan owns its days; a day owns planned exercises;) Tj T* 0 Tw .138462 Tw (a session references its source day; a session owns performed exercise records; and each) Tj T* 0 Tw 3.41712 Tw (performed exercise owns set records. Foreign keys and indexes support these) Tj T* 0 Tw .2466 Tw (relationships. Session exercise names are copied into history so that past records remain) Tj T* 0 Tw .537 Tw (understandable if a planned exercise is removed. Migrations 1) Tj /F5 7.2 Tf 8.5 TL (\256) Tj /F3 7.2 Tf 8.5 TL (2, 2) Tj /F5 7.2 Tf 8.5 TL (\256) Tj /F3 7.2 Tf 8.5 TL (3, and 3) Tj /F5 7.2 Tf 8.5 TL (\256) Tj /F3 7.2 Tf 8.5 TL (4 add) Tj T* 0 Tw .2808 Tw (profile, exercise and session tables, profile age, and persisted timer state while retaining) Tj T* 0 Tw (earlier plan data.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 389.34 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9 Tf 10.3 TL (5 NAVIGATION AND USER FLOW) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 319.34 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 60.8 Tm /F3 7.2 Tf 8.5 TL 4.281 Tw (After setup, the user enters Home and can move between the four main) Tj T* 0 Tw .140073 Tw (bottom-navigation destinations. From Workouts, the user opens a plan, selects a training) Tj T* 0 Tw .6126 Tw (day, and starts the active workout. On completion, navigation passes the saved session) Tj T* 0 Tw .3384 Tw (identifier to the summary screen; the summary's Done action returns to Home. Progress) Tj T* 0 Tw .468514 Tw (is opened from the shared bottom bar and reads the same saved session history. Profile) Tj T* 0 Tw 1.1232 Tw (opens the profile screen without replacing the workout or statistics navigation graph.) Tj T* 0 Tw 1.5744 Tw (Only identifiers are passed between active-workout and summary destinations; each) Tj T* 0 Tw (screen reloads full records from Room.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 304.74 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.3 Tm /F2 9 Tf 10.3 TL (6 VALIDATION, PERSISTENCE, AND USER EXPERIENCE) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 292.94 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.1 Tm /F2 7.9 Tf 9 TL (6.1 Input Validation) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 240.64 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 43.8 Tm /F3 7.2 Tf 8.5 TL -0.05664 Tw (Plan names and day names must not be blank. Plans must contain between one and seven) Tj T* 0 Tw .581538 Tw (training days, and weekdays must be unique within a plan. During a workout, exercise) Tj T* 0 Tw .782031 Tw (names are trimmed and length-limited, set counts are constrained, and a set cannot be) Tj T* 0 Tw -0.032677 Tw (marked complete until repetitions have been entered. An exercise must retain at least one) Tj T* 0 Tw .9072 Tw (set, and the interface enforces a maximum number of sets per exercise. These checks) Tj T* 0 Tw (prevent common invalid entries before they are persisted.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 228.84 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.1 Tm /F2 7.9 Tf 9 TL (6.2 Session Persistence and Recovery) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 159.54 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 60.8 Tm /F3 7.2 Tf 8.5 TL 1.842646 Tw (Active workout changes are written through to Room as the user edits them. The) Tj T* 0 Tw .83664 Tw (ActiveWorkoutViewModel queues database writes in order so set edits are committed) Tj T* 0 Tw 1.77624 Tw (before the final session-completion operation. Timer state is stored as accumulated) Tj T* 0 Tw .030764 Tw (elapsed milliseconds and an optional timestamp indicating when the timer resumed. This) Tj T* 0 Tw .722215 Tw (representation allows the timer to be reconstructed when the screen is recreated or the) Tj T* 0 Tw -0.004431 Tw (user returns to an unfinished session. Finishing pauses the timer, saves the final duration,) Tj T* 0 Tw 1.6806 Tw (and navigates using the persisted session ID. The summary screen reads the saved) Tj T* 0 Tw (session and related records rather than relying on transient navigation data.) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 147.74 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 1.1 Tm /F2 7.9 Tf 9 TL (6.3 Interface and Navigation Design) Tj T* ET
+Q
+Q
+q
+1 0 0 1 313.92 86.94 cm
+q
+0 0 0 rg
+BT 1 0 0 1 0 52.3 Tm /F3 7.2 Tf 8.5 TL .5628 Tw (The interface is built with Compose and Material 3. Home, Workout, Active Workout,) Tj T* 0 Tw .013292 Tw (and Statistics screens use a dark visual treatment with orange accents for primary actions) Tj T* 0 Tw 1.468145 Tw (and key metrics. Scrollable layouts support longer plans and exercise lists. Loading) Tj T* 0 Tw .69552 Tw (indicators, snackbar messages, confirmation flows, and a statistics empty state provide) Tj T* 0 Tw 3.3272 Tw (feedback during common interactions. A single AppNavHost owns the bottom) Tj T* 0 Tw 1.923709 Tw (navigation bar to avoid duplicate controls. Nested routes handle plan creation and) Tj T* 0 Tw (editing, workout-day details, active sessions, and session summaries.) Tj T* ET
+Q
+Q
+ 
+
+Q
+
+q
+0.0 0.0 612 792 re
+W
+n
+1 0 0 1 0 0 cm
+BT
+/F1-0 12 Tf
+14.4 TL
+ET
+1 1 1 rg
+n
+35 684 542 48 re
+f*
+0 0 0 rg
+BT
+/F2-0 7.6 Tf
+9.12 TL
+ET
+BT
+1 0 0 1 50 725 Tm
+(Mohamed Sherif Mohamed Abdelmonem) Tj
+T*
+ET
+BT
+/F1-0 7.2 Tf
+8.64 TL
+ET
+BT
+1 0 0 1 50 717 Tm
+(2023170499  \174  mohamed43\055maker) Tj
+T*
+ET
+BT
+/F2-0 7.6 Tf
+9.12 TL
+ET
+BT
+1 0 0 1 50 711 Tm
+(Mostafa Mohamed Mounir) Tj
+T*
+ET
+BT
+/F1-0 7.2 Tf
+8.64 TL
+ET
+BT
+1 0 0 1 50 703 Tm
+(20241700844  \174  mostafamounir30\055glitch) Tj
+T*
+ET
+BT
+/F2-0 7.6 Tf
+9.12 TL
+ET
+BT
+1 0 0 1 50 697 Tm
+(Kirles Medhat Makram Azmy) Tj
+T*
+ET
+BT
+/F1-0 7.2 Tf
+8.64 TL
+ET
+BT
+1 0 0 1 50 689 Tm
+(2023170451  \174  Kiro\137Medhat7) Tj
+T*
+ET
+BT
+/F2-0 7.6 Tf
+9.12 TL
+ET
+BT
+1 0 0 1 315 725 Tm
+(Mohamed Abdelmonem Mohy Eldin Saadallah) Tj
+T*
+ET
+BT
+/F1-0 7.2 Tf
+8.64 TL
+ET
+BT
+1 0 0 1 315 717 Tm
+(2022170735  \174  muhamedmddm\055oss) Tj
+T*
+ET
+BT
+/F2-0 7.6 Tf
+9.12 TL
+ET
+BT
+1 0 0 1 315 711 Tm
+(Youssef Sayed Soliman Abdelfadil) Tj
+T*
+ET
+BT
+/F1-0 7.2 Tf
+8.64 TL
+ET
+BT
+1 0 0 1 315 703 Tm
+(2023170730  \174  Youssuf7) Tj
+T*
+ET
+BT
+/F2-0 7.6 Tf
+9.12 TL
+ET
+BT
+1 0 0 1 315 697 Tm
+(Saif Eldin Walid Gomaa Abdelkarim) Tj
+T*
+ET
+BT
+/F1-0 7.2 Tf
+8.64 TL
+ET
+BT
+1 0 0 1 315 689 Tm
+(2023170777  \174  saif1addin) Tj
+T*
+ET
+Q
+
+
+endstream
+endobj
+6 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+7 0 obj
+<<
+/BaseFont /Helvetica
+/Encoding /WinAnsiEncoding
+/Name /F1
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+8 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+9 0 obj
+<<
+/BaseFont /Helvetica-Bold
+/Encoding /WinAnsiEncoding
+/Name /F2
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+10 0 obj
+<<
+/BaseFont /Times-Roman
+/Encoding /WinAnsiEncoding
+/Name /F3
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+11 0 obj
+<<
+/BaseFont /Times-Bold
+/Encoding /WinAnsiEncoding
+/Name /F4
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+12 0 obj
+<<
+/BaseFont /Symbol
+/Name /F5
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+13 0 obj
+<<
+/BaseFont /Times-Italic
+/Encoding /WinAnsiEncoding
+/Name /F6
+/Subtype /Type1
+/Type /Font
+>>
+endobj
+14 0 obj
+<<
+/Contents 15 0 R
+/MediaBox [ 0 0 612 792 ]
+/Resources <<
+/Font 16 0 R
+/ProcSet [ /PDF /Text /ImageB /ImageC /ImageI ]
+>>
+/Rotate 0
+/Trans <<
+>>
+/Type /Page
+/Parent 2 0 R
+>>
+endobj
+15 0 obj
+<<
+/Filter [ /ASCII85Decode /FlateDecode ]
+/Length 2846
+>>
+stream
+Gat=,?$G9f&q04U;/_r['+D=S%C8h]+k^u#COjXqS3?HdC]U!W(*h"abcfnR8Hqkd6Z70D#@^i9c[5!354n?b2o!fCi*UQh?MiXc0OKFhp\HSYK?=&?T:a>"#dG2n;W8/@$=<J_+ar6@@RuY'D(FQ(k-t6`F>X!f'8uq+_lo-M09=G#Ge+hW4A;V+HFO#t_drUfR/[3YJ".Jqq2lHsiR*eJa62]'!`.:cc]dnsBU9NhoFF\]V`16\&9a\g`k+3"f*dE(aIr#$b[G[22XL+M0Ss'4BJhb)oJ>Xh,iF--pSA$GoZVnj*M8)d4eIc!?3ck,+f0*Jah*@KgD/W:>]'mTC)G-7.9<ic>0+!\nnY#j+RiiUZt1`p0O-H#Gi>lfhX=i;'tZ9@90?/)`_3h/Y;qQa9M(?IgMCnm)V\*0XNiiU'sF9@"g9g8jhT%4?+3mpP<C\^`IfF,6MfELNZ2IEW@U12b)/p=^"$>\'h_oX^*A[k/tiiQ.-b:1cKOL.E_6fErCbL2XggR+(abThT?h>s>$h!V0tna!cnBbg.Trg:GMN;`bQaVFLg9.&%l7O.AApi6^e;,WGm9uGNENeh/AhmDOZLN5=0jtje0<46!q&MU-o.+:j4\eJAbH8,/h<;]=o>BWG"']AnX7.0Us]ug9X=mio2WBa"fn:K1VAFcA"$2f8qp2*0W&Z+4J:[KX;"<6BukOf1POr%B;-BB>&5oY^bb5^SCJpS5jN=(DQ[_(-I5HY2iNNsZ*[C!&"Z\M8r^kl+A;]?T28@]='X=b>ZJ;h_7Nf%=28jmBR)%,bLV@tp4(9m0%ZT*?K"Do2]U:DVLhn+3A=iQ5/^g\i6S(Bn'M:A?iorACju8#A#SVSkL&,Qr&5J;B$\rR_g$4AC,?bOZp(]5%i`F`7X&84]tqLlW%!Da;:(21/!amUB:,dH^YE<d#Rq^<CN=(2a#cA^?=^2.ed_W8@WjP+%YTZeGWWm,(C+AV/1pXcD1trU=SSUul4#5&q^O2Gl4U>P9C,JO*"a@$`+?L<[\%Qmg$B]e[*80UW#,>fDm@+K[*DHkDK8ddS3=0"E/bdPgrV?UlK2c]AL[+pYm]b3_0>W/j*Bb&D-:RQ'9+2jD8oJaF_If+#`[&9E=]WRas\(,ZLbrjaD;gLa<7oTCNSKM(CRLRWI^n_6ci]4&51/S\Uf87)H5l=$[9B`*1gOjn08kc<P1]uj-can2MoFactg/]X7]-;254?,UKX,hA%psid!B-[@S:9<&eFL^<FXq\?mjlu;E%9ODfWrT9V:_#J'u:pa<[F(-oe!6Qo;G-rB%1Wf9F\o/Z8)>T%6l:h4!%,NGY%,a#.HIO%i=\4d6@J;6h/[%`3mVA]$U[>1Rsg$qkcuSDlNl30>(i^;NssCb(:0<A2:*^n;k?__!h\[R/*apiDH'P!2Y7+5rjnN1[#saho*1j2\'S@A:BgqqLp[If&mo4(G`aN'Gl7hr^RCohT\J6#INiT_>(HD5u&g.JtE?K<;(eK^W9<9$CZ3b#7aoCSYWr+*[7Nf*6d`JR]c,I(ANYAW@K0#:fp0c7V[D6gBF'TVA#c)TNcuArVP6\TM;Db`1?"[_6)d-Pf6DQUkI(Cc@W:MAf3lYd#\l'Cp\V7habl(Xc8MKgAY+L6a`-p6EQfgK$-:CeH:M8js$=+ePj@iDLsP47dMg4]cWV"jUQ].paEtk-3u=-J3ki>f*^$C2DlF$u0WM$Xq"L(b'G=d1-P07NtSgeqlb#Y?ZZ!fqU8?d?Y9qei76)Odud'L62['>IgTgH"M-Jb_Tg_G<g?@:h92:5EIE3;QjM@W:igQ-*fe(Em%aCH1b@_HF5qr/+O?$CoTEn.0qp'Qh>a"7(,G!3=Lej!lZD\rbkqAeKIYuLsqK2EI8s3.aBd_-5erQC6/jV7bLT`D&p"HRXIOIcg7lNMAK/h>H4erEH7_L_0E#i9(V$TdTkAjl#B",esf=J-7l^)T'anKafME<'cXA^nT1MS+/$Y=6n1P@5<b%pSnCS;kDTPNklW0T'?,;J#!MVUTr$SS@SY@Cg3t2;9OP\p"V!l&.2=EPJ?kHB%*;bk^6NDQU7=W73!".5-5L8T%FIZDfS6<9pT;)HFZZCg;;ZIi6NO\3_7-2276u90bE%^Ll*8qgY,YZ/_TdBc>Ugt'9%"fAlsM1P&dV@!)T@QYp'(PX@;F*X"+';pd?9OSQ(#9rnTO-kfq,+s'*(UCVI7N6`p!XPK2VPhU71(jAC[*!c%:80*dD'GU'q--0]:CdENufZ+@h!%GY#5Pqh=VN#2"s7+2rYdjJGD+Gf#4mOW/AR2(q[q.W?M\le4=ICa:;mor:#8E$Dj+IAJks'Z:AORlmmVFO`#4qO#o@F-umr]h`:Wf8I<&LVPheIsH;:oknemF,si0g]S.O!J9S]4+hJ1%tQ`_1Vp?&@5!0MR+*RgN8R*8=$%.2kE7A4Or<=_[I$MuNRJR#lih9e++_p)NpHd\Q(='2.4/@=X`-O6$hV`KJRc<rLH0ab6=CilY<`*5$;Do"'9lb^ak>ZArK#$>G^-V`DoMkUB$Aok$n7bV0)k2:^)*%%AIjf;%mG'J+hDd!+?WbA]r?JGG-g<XO4e@k128aj[l"Z-j1j]"R!^/LLY+okF++A_qe_.M^1*4<^dB^iMB1ZT3T/qB)N*lZHZTOUfGe+MLS$/F0_f<2ITK7\pLCh7"fb?MM=p7'S*#GucW*KYNC^[`*T(!JJ+sW!Hri$#htO=Rgs_H+=(@)=9:K'XGe6GqFpR0JCdB7OGuA&gA6NE*2&eUKlqBdp>O*L5hI(Zga(Y:/Y)D/?bQH#LPuWNMVN0Ph_jRBC=1bkRnC0&a#G:]1I/4q/=S'`~>
+endstream
+endobj
+16 0 obj
+<<
+/F1 6 0 R
+/F2 8 0 R
+/F3 10 0 R
+/F4 11 0 R
+/F5 12 0 R
+/F6 13 0 R
+>>
+endobj
+xref
+0 17
+0000000000 65535 f 
+0000000015 00000 n 
+0000000054 00000 n 
+0000000120 00000 n 
+0000000169 00000 n 
+0000000458 00000 n 
+0000018560 00000 n 
+0000018667 00000 n 
+0000018774 00000 n 
+0000018886 00000 n 
+0000018998 00000 n 
+0000019108 00000 n 
+0000019217 00000 n 
+0000019295 00000 n 
+0000019406 00000 n 
+0000019598 00000 n 
+0000022537 00000 n 
+trailer
+<<
+/Size 17
+/Root 3 0 R
+/Info 1 0 R
+>>
+startxref
+22623
+%%EOF
+3 1 obj
+<<
+/Type /Catalog
+/Pages 2 0 R
+ /AF [18 0 R] /Names << /EmbeddedFiles << /Names [(Content Credentials) 18 0 R] >> >> >>
+endobj
+17 0 obj
+<< /Length 24276 /Type /EmbeddedFile /Subtype /application#2Fc2pa >>
+stream
+  ^Ôjumb   jumdc2pa  €  ª 8›qc2pa   ^®jumb   Gjumdc2ma  €  ª 8›qurn:c2pa:ca8546ab-bdd6-4d8e-83e3-7335c6c44fbc   jumb   )jumdc2as  €  ª 8›qc2pa.assertions   	¹jumb   #jumd@Ë2»ŠH§*ÖôCic2pa.icon    bfdb image/svg+xml   	wbidb<svg width="716" height="716" viewBox="0 0 716 716" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M508.749 317.399C516.777 287.314 508.991 253.884 485.389 230.282C461.788 206.681 428.36 198.895 398.273 206.923C376.231 184.928 343.39 174.956 311.148 183.596C278.906 192.234 255.45 217.292 247.36 247.361C217.291 255.451 192.233 278.91 183.595 311.149C174.957 343.391 184.927 376.232 206.924 398.274C198.896 428.359 206.683 461.789 230.284 485.391C253.885 508.992 287.313 516.779 317.401 508.75C339.442 530.745 372.286 540.717 404.525 532.079C436.767 523.441 460.223 498.384 468.313 468.315C498.383 460.224 523.44 436.766 532.078 404.526C540.716 372.285 530.747 339.443 508.749 317.402V317.399ZM470.899 244.776C486.892 260.77 493.488 282.601 490.687 303.412L415.577 260.046C412.411 258.218 408.509 258.218 405.345 260.046L317.401 310.82V277.526C317.401 275.191 318.652 273.005 320.676 271.837L387.644 233.174C414.178 218.353 448.346 222.223 470.901 244.776H470.899ZM357.837 311.144L398.275 334.491V381.185L357.837 404.532L317.398 381.185V334.491L357.837 311.144ZM264.776 269.693C265.207 239.305 285.644 211.649 316.453 203.393C338.3 197.54 360.505 202.744 377.127 215.573L302.014 258.937C298.848 260.764 296.898 264.144 296.898 267.798V369.346L268.065 352.699C266.043 351.531 264.776 349.353 264.776 347.017V269.691V269.693ZM203.391 316.454C209.244 294.608 224.854 277.978 244.276 269.999V356.73C244.276 360.384 246.226 363.763 249.392 365.591L337.337 416.365L308.503 433.013C306.481 434.181 303.961 434.188 301.939 433.02L234.971 394.357C208.868 378.789 195.138 347.261 203.391 316.454ZM244.775 470.9C228.781 454.906 222.186 433.075 224.986 412.264L300.096 455.63C303.263 457.457 307.164 457.457 310.328 455.63L398.273 404.856V438.149C398.273 440.485 397.022 442.671 394.997 443.839L328.029 482.502C301.495 497.322 267.327 493.452 244.772 470.9H244.775ZM450.897 445.982C450.466 476.371 430.029 504.027 399.22 512.283C377.373 518.136 355.168 512.932 338.547 500.102L413.659 456.738C416.826 454.911 418.775 451.532 418.775 447.877V346.329L447.609 362.977C449.631 364.145 450.897 366.323 450.897 368.659V445.985V445.982ZM512.282 399.221C506.429 421.068 490.819 437.697 471.397 445.676V358.946C471.397 355.292 469.448 351.912 466.281 350.085L378.336 299.311L407.17 282.663C409.192 281.495 411.712 281.487 413.734 282.655L480.702 321.318C506.805 336.887 520.536 368.415 512.282 399.221Z" fill="black"/>
+</svg>
+  jumb   )jumdcbor  €  ª 8›qc2pa.actions.v2    ßcbor¢gactions¤factionlc2pa.createdqdigitalSourceTypexFhttp://cv.iptc.org/newscodes/digitalsourcetype/trainedAlgorithmicMediamsoftwareAgent¢dnameegpt-6gversionegpt-6dwhenx2026-11-20T15:18:21.850302ZrallActionsIncludedô   ¤jumb   (jumdcbor  €  ª 8›qc2pa.hash.data    tcbor¥jexclusions¢estartZŞflength^Ôdnamenjumbf manifestcalgfsha256dhashX où¡Óx|s¯öÓwÿ<wÇhKÅ¨ê±t`%¼×ĞeZşcpad@  ‰jumb   'jumdc2cl  €  ª 8›qc2pa.claim.v2   Zcbor¦jinstanceIDx,xmp:iid:c9d5f257-0aff-4ecd-9fc5-8a5f3b5ac249tclaim_generator_info£dnamegChatGPTdicon¢curlx$self#jumbf=c2pa.assertions/c2pa.icondhashX u>ğ=W1’³¨NëLûÁŒt·'wÖĞ6Çe6ãñkspecVersione2.2.0isignaturexMself#jumbf=/c2pa/urn:c2pa:ca8546ab-bdd6-4d8e-83e3-7335c6c44fbc/c2pa.signaturercreated_assertionsƒ¢curlx$self#jumbf=c2pa.assertions/c2pa.icondhashX u>ğ=W1’³¨NëLûÁŒt·'wÖĞ6Çe6ãñ¢curlx*self#jumbf=c2pa.assertions/c2pa.actions.v2dhashX ©™µó•,î¹ëÅ1«ºPõ¶~ÁmÊØNÁú¨ş¢curlx)self#jumbf=c2pa.assertions/c2pa.hash.datadhashX Ùc¶l:6\GåwoÎ†[E…Í`6'ÒzGÃû³S;hdc:titleiimage.pdfcalgfsha256  P8jumb   (jumdc2cs  €  ª 8›qc2pa.signature   PcborÒ„Yè¢8$!‚Yˆ0‚„0‚l ¥üépŒò€1îDds0	*†H†÷ 0J1!0USSL.com C2PA ICA R1 202510U
+SSL Corporation10	UUS0260422155105Z270423155104Z0G10	UUS10U
+OpenAI OpCo, LLC10UOpenAI Media Service0‚"0	*†H†÷ ‚ 0‚
+‚ ºjLM—ê‰¶Ñ¾^XNr¡™ßiq|å!#Ó¢5œL£J<ïn+¿æd®×„Ki$ZcÏêv
+²eÛ|<áşÁ3w¯'Ş; :´c‡˜ÍMœ¿´3DªT07F¸ıšyDsWU£c|İ¬X/æz®Ş¥˜Ã“NHğZøà|¤’KÕlºÊÂ*È’¾uÔ”gµWªjšm00,×UaŒjÒS¶ x^ECN’£€ñ¯[Ñ²ëş‹ïº×7	•«d-™É‡šø¿.Ğçc€–šy 7“6£5ÉHÉ,˜céD›5¬¹§SlœhsÈ
+9ÌIó £‚g0‚c0Uÿ0 0U#0€9=GÜ—¯ˆ{MsÍåî¤¥*0o+c0a09+0†-http://crt-c2pa.ssl.com/SSL.com-C2PA-I-R1.cer0$+0†http://ocsp-c2pa.ssl.com0U 00
++ƒè^0)U%"0 ++$
++ƒè^0UóMÔËrøF
+vG¥hOt0UÿÀ0	+ƒè^
++ƒè^
+03	+ƒè^&$019bc403-5cd7-7669-afe6-fdb17177d4280	*†H†÷ ‚ ‚8—le¡7 ñùítºÕ¦[5õglÏ+fi@ÍõüÒrVßÊ•(êøfŞBC=øx h(‰­µîüõ2ÒŒ¸_çl€në[|—[0ç.B¸Æpšşş 	¬5FÕ ŒIE€Ãº’UÇZoÒëØy›–:¼D44}ôA¥3—/.lQR
+m=I°ËÇ†XÌÜî.éÆ9¸3\ Úî W3T.p(J%)O’|.Òúİg.zèPx9Qºƒ:Úˆ~#’õbXšåÂ¨s†ÅØqéï\d{‘î7/v˜xVdçoBÑ}’¼…jomd…Øÿ"–í¹ï²Ğ\„}h]5[K±ÅiHyæh Äa˜:LøÀ$yå¦hàïıÖÖ.-AduV_“”¶¡œŠ<¶ÀèmóÅCçv,h¤òæË‹ˆ•è{*r$=!Æcm/%€£™[ª)¥ıGêá÷kåû[P&m+¡‚]1õİb¨|2ÜLÇ¥,r0P€W“‚âè®³§¯Y4®rï*®x¬â3ìSµÉ™Ò(¨*7¡N«üÌ~X›'mEá´*œ½0W¡1. .ÉâÈTÛ¡’O¾$5˜ş/iÜ¸MãŞ/èlõÁŠâÓşrwÓ¨+ÔW—®‡Ø ¾“¶‰YS0‚O0‚7 '+cÈÌM-›„Qrlôœ^2Q®Ş0	*†H†÷ 0O1&0$USSL.com C2PA RSA Root CA 202510U
+SSL Corporation10	UUS0251222181730Z301221181730Z0J1!0USSL.com C2PA ICA R1 202510U
+SSL Corporation10	UUS0‚"0	*†H†÷ ‚ 0‚
+‚ Ë:´Í¸œË)V¸y§øköùØrÃ¦˜­*AÚa.GR½tQ¾]ìz‚¶Àûúè'¥‹èşbó`ñ_HÊss•äNnÌNz5ŞXá×‚ÜÒGCw›ßHˆyŸ£9¤YN^àNG—òuB×v=¶¤"ÜíÆoÔrFŒÖQÇµ·zò“ù#'Õ€PuŠp héç¼„(|œ*ê)©À/şÉvFU°/cê}ô°D¤@Ş@6\DŠTkWHÿ»o¤ÕêÂ×|Ø¼Îi¿  M“E;™.yÒÏŸ)»FÙxc0–3Qœ^“múå4JXx³)l]|¸u•<™w!{Ø´JëÚÍÇ
+ÖÉ¢Ş®—³¶Q–Ú’›Ã²»PÄş¶¤L•]-’jObåà*÷i œÕ¹“ ÚÑ»^OÆ¯ù)LĞÉìëó²qP{v'h‘ùPˆ¸w5ØÍ¡á×Ó)çJÆ‡TY$Âg²m	5ÛºÎ¸F¥à‹Úá§ŸjÎ`ÒÄ÷ÁŞsyUàp´ïêÌÇşv‰Nf
+iˆ-íÃF¢*äŒÔœWF-XbÕÊ¨ú~øÂÙajË5] “£²e¨/íï˜çü~ºHôª¡qü“¯ê§NsˆiÕBÀù„’…OËT³=:øİ)eyÊC–¸‡X–!ïÑ‘{ £‚&0‚"0Uÿ0ÿ 0Uÿ0)U%"0 ++$
++ƒè^0U9=GÜ—¯ˆ{MsÍåî¤¥*0U 00
++ƒè^0U#0€ü*Ju:€ú™c“ğsWì¾“°}Ã{0x+l0j0$+0†http://ocsp-c2pa.ssl.com0B+0†6http://crt-c2pa.ssl.com/SSL.com-C2PA-Root-2025-RSA.cer0	*†H†÷ ‚ Î6ú>ï–6-¯Ufÿ{+ kVõË­½*­¥¦ĞM£>“ä“iÕäŒ¨næ7Tâ%œìef(<3=¢š¢»ÍgdJç¾t!¡nÃ«&Ä;,ÚU¹ıGNàx›7ƒÄt;ÅGaïmAr¤Û]CSÉ–Nåà:ß¨İ.Ñ¯X—Öçô_r#<kÏ½9«Œ“¨§vY>á’õ÷ÙûFb«nnÔˆF ³/*j_¥NÚøÔüÌÙ£<©wE
+Áù˜¹9ËÌ¡qÀ*‚qÓäö%âQ!mÖßäSoJ}^ÀºÕwy!zÎí÷›¶²ŠBVkA*şkœ‹î£(Ï_óéĞdÖîÂ‰Kë’Ïõ¯Â'M¸‘¡7%™æı€Üô¼Ç7{¾´-gXğ/çÃ³‹qåDz0¶¥²u>[#~;ÓT¦:¹ÇÌ3Õj5zv/şWÚiø>?ïT‹{FÃcúíÄ/p„+öV‚ô§Ë$×l^${:½©X;i³œÒptÿ‹n&»Ã«EÇS–œGµÆF«^õüˆ‹h£5å|j•eµ«ë¹ÿº¸à›JG²Îì/‰}î¯œMÄÉÎõ2=÷&4ş"‹zíù^^g_Q[Û$VûÑY¡·Şšf	¶Ñ†.ú}~•y›Df|6…öõ£gsigTst2¡itstTokens¡cvalYŒ0‚ˆ	*†H†÷ ‚y0‚u10	`†He 0ˆ*†H†÷	 yw0u
++ƒ¿0010	`†He  ÃvÊn‘#Ã8rêÙØãfxë‚Uïmt\×RªÕpkµ	 šÃòÒ20261120151824.653753Z0€	 LÒª^¾8S ‚f0‚ö0‚^ aÛF(2ŠŒJ·¿ş`ãl?q·0	*†H†÷ 0{10	UUS10	UCA10USan Francisco10U
+OpenAI OpCo, LLC10
+UTSA10UOpenAI TSA Issuing CA0260408174626Z370709174626Z0u10	UUS10	UCA10USan Francisco10U
+OpenAI OpCo, LLC10
+UTSA10UOpenAI TSA Leaf0‚¢0	*†H†÷ ‚ 0‚Š‚ êÊÅ­”ığı'ŸÇx§aÊÿ)a*û¡ˆÍ_¨¢—‰/‹‘È¼°–=U‚Á–6j­‰ièÛ,D2ƒ¨
+Íwå5èî¨d[ş¸àç ¡(Ã5İ§7é"÷	M—š´„sÀ.|©PG( ´ğiğ°‡)zYş5BùÙiRJ 7òhÌñ-·‚– KF\=¤†¸KEf8¢NM'Ê•ºuÌN‡jŸtÃ $_Ä~\®şó•í ‘ß<õ†›*^ÖĞİÉúÈMÃÉ„ZI,ä8s`R¸LîÆó·¶Øİj©Î º]ÖÄ\5dò#S?be]p+ÔÉk	ERèWíZF]Ú]vœ%yhƒQ¤˜„u‘r˜UÿØãCb±íig'A¼Åòj+ƒIèá-4»9¯g½´•È²½EgÍrˆ”_UK,­¯í¥ô$¯w>ƒŠdQ‘Œ9–K°=®ú™¡>Œ=ğ¾6¡.õcµ £x0v0Uÿ0 0UÿÀ0U%ÿ0
++0U¤'T‚¢Š€{=Å†Í?pÙÂƒ™Qx0U#0€òğ°ÇT=#C…ÜÊsĞr€=¸¨0	*†H†÷ ‚  û$OAÀÀ¼˜²2  ™H5OÄFV~§>?¶¥#ù*H>àQE@xÁ»ƒN“PÉ›'–hßMÎòöÒy«ïêÁÚ?õ˜YæpÍ‰ôîG‹ªËìÿŒ~áFØ‘æœ¸ä4FÿaÒxø}89ãRí_fèsÀ r;ä¨«†*£7!ù;ß{\TØLÇj*KÏCt`€s£ÉÑw¯‡©ıµ±„jn¿ˆ*Îš¡š«¢‚H7ÅcQ—ÛR|ogÉiBÕÏõû­^‹âày<.ƒj¥è%A…íäÁ :şRPï‡ŞádÍUù! ß¶)ïŸ'nÑº4F«J"OçbwİE#İa-Â1)Ä¹~y«´WÔÁìÏá\{eI°ëM«¤Ç'@N¦´µÏ|Ã´C§vÓ^0cî¨®5(td«Z5ã[/:>N
+aÖ0MC›ÿN.Æ!¹>:, W0ujdK¢Ğ	Ñ× g&Amgøpv¸%&Vù‘&'ÃKI0‚~0‚f ÊÆÅÅÚ°¼ñN•¥ê¼0	*†H†÷ 0x10	UUS10	UCA10USan Francisco10U
+OpenAI OpCo, LLC10
+UTSA10UOpenAI TSA Root CA0 260408174626Z21260409174626Z0{10	UUS10	UCA10USan Francisco10U
+OpenAI OpCo, LLC10
+UTSA10UOpenAI TSA Issuing CA0‚¢0	*†H†÷ ‚ 0‚Š‚ ‰¼Ô¹âÈ¡¾a»Ş<df~§¾œmÓ©0&<ôàk 9ß•4í©¢eHÛ7†2ƒÌ
+J Àó4l À˜Í+Ÿ¥ôË|Ù&Ş~ÉM¢ïc[‘æöY¨ÒúNùÙ8+ZÍ`Z˜˜¨×SÆãÖ.H¬CW	é”òGùlEŠ`·÷®/^¢5N…8…iŸ4ĞMØC=Í4müc“üÓp»JèvèjNfI íüø¾ïš·¨w¬ï·8Ì¹Ô*3ÄvÖ@wËşÇ]-@ÓŞ‹<ÀÖ@A™Ë”?,} kRüÊP·	GEá#Uú±OoT˜•ô}ºøhá"zÜŠ‘C‹¶.C±b ¾Ê$.ï¿¤ÑMè¸?1Ï&=Å PêòÙ$ díÕs.pxªŞV<ùÔ€¢è­¯öû¨£\Ëh«DÛ0wòÄ4tkUmÆ‡ûò2<qE÷ìPûşÖ1&»ĞÄMaâBÛ¯Ã+n_+æâ°ï\DÍÀs}¢é½m‚¼%e„0ií £{0y0Uÿ0ÿ 0Uÿ0U%0
++0Uòğ°ÇT=#C…ÜÊsĞr€=¸¨0U#0€XÂ@ <Gv+¨æn¨‘––È·Ùä0	*†H†÷ ‚ ’ì7\ŞlëdÚ®¡	0r®Ürõ;¼z=ÖÆá/öƒ3}èW@NL™ªkÔ™Ù‹ÛkÖLøÊĞY3Ó¡ 8\#ˆD$û‡áö“'¼¡íL_g]ÿ5«1Òì{Ô@C7OÂ„œºdÈ°¢~š6øáĞ‚³PC²àU½€”ÈYRNJtŞ]ÇEX›·ú0ª;ÜG¼Õ.,¹8c,yZ·İU­=BßˆÏñhşs ÔZ·Ş$—‘ÀçgşÜ¦
+ó¥F³QÏ¯_ãÈ¸@Æ½ãùÖKqĞd]ådÂKÀ^wÑ=Ç[Ï{ı””çKQÚûdô«ğ5”ñö¾~+İ²š=PİPÃ–dm«sŸ(;wĞ—íoEO±3._Fëƒ¶©a¼×‚®ø€oÂãi0æm|:D’+˜-¯Ü4Á¾¥*Hç‡ÈŞ8µ3Êã„Ppñ²KŞOö‘Ü_…úñæÑ×Ê§î´Ÿö!x)ğãpXw†¤:K—ƒFèÚÂjvÉ©Ë!E¾e± †.€¼YKM›Cm´×„àüğÕÈaCjÃñ!<„]ş;ÖØ#9E_qú2ı €•DµO åÃtıâN‡r†ôğQ‡½Ôµ+5l’¤;kjºıÀ;œvÂÕ9IÚã”>Pj×Lâ‰aïëÏÅÃ@npz80‚æ0‚Î P;l‰Œğ$3,÷Oû}‚ì0	*†H†÷ 0x10	UUS10	UCA10USan Francisco10U
+OpenAI OpCo, LLC10
+UTSA10UOpenAI TSA Root CA0 260408174625Z21260409174625Z0x10	UUS10	UCA10USan Francisco10U
+OpenAI OpCo, LLC10
+UTSA10UOpenAI TSA Root CA0‚"0	*†H†÷ ‚ 0‚
+‚ ö’éÒº­á¬u¨VØª±³j’_–yõ’·-$ø¿À¯`¾ÁšÍyšÜlšş6šÁ˜¤?ä,º¥¥Ps³
+ÂùóÄI/x½Òì¼ç?ô›Ñò a¢,‰%ÊQù%œÒÆ/ô‰ÄAş&Óm5Íì»5`@¨…Q¾öî˜ñ*ØzkjÙ.Ùcóå\)Å†"ÁŠhÍë8©P–[#Cû8ÿB|;:¡Q/%ÉHÜ1ÿPrîğ|¡wÍoaó?¿nèÒ±¦6äk2ûşw¨^›\İİ1LeÿËAÎ(1SÊCÎHn}Öd³)ä´.:·TZrVWó¨j}ïæaİeÈH	I™2tğ
+¢Ìİ“ S¬#½‚… ±ï¾í¡w î:F3¢ì¯é1f´fo²‰“ ~•!ÎAø^ğéÍ¹ÀÕ3]xĞĞ'1ÏP0rsÚjÂÀ“Ï­Üd‡öûNˆvõ>ïÿ’,™w.öÜ˜¶	:ıô	Ç_Zé~H	+µŠƒò[<,¯‘¢A·RhÑ¿°ÀÚO`½î)ªí‡q\(Œˆ£%cEØü{alFT;\É°‚¯ƒÈ±#?Ÿ[î¢×Tµ*S®»…Û¦ú—ì„‰róz@É¶…XG[ñ$a9¢LŞØÆ¨"ò¿[L,Ë £f0d0Uÿ0ÿ0Uÿ0UXÂ@ <Gv+¨æn¨‘––È·Ùä0U#0€XÂ@ <Gv+¨æn¨‘––È·Ùä0	*†H†÷ ‚ Xø‘˜òlaşÈ†Ö[„¦Ö¾¸¦]]IË¸¡)Í-¸Xùğ„‰=<øoÕj´*¢U’ğg™^µTûšF€ãQ SÀÁˆWŞï‚U~ãô}ë&üƒÿ!¨Á¬ŞÛ“«ÍĞ0v:“Îªg9.€tßmğ~v/éêPA‹8=låà>î/ÛdT6^¾bE¶Ñ!´€<ŒëÚœÖJ©ÕTe[kÑX~ÀI‡ëëK_’;”×š†ö¡YÎGğ8¬Ã°tdÑÀR;¡±{(kái—ø(;'ÿ®¤÷eË ôê¹½”ÎDâ˜±
+HhîU©!¥`şÊÖ}Ñ{† œó¨xĞÆÚ@.È\b¨*ÁûVçy¯ìåÛÓpşFÌc¨dñ<é¯¥d¼^¿…-°Îã¹Ó¤×R»p‹†û.¿
+öÒU+#B+C\ì¡‚a?Ïqí°÷—éäËÂ<ü¬w·¶Ü ÁLé‰²²/Ã~’dœµ„ŞÌ–ı‰°KµC}Òé­†ıÙ-Ÿ½ îÀ´GV#|H‘Ng‰ {bÁÉ^UñöÆQ#Woï‡¾ Fy¾”±È (•Šˆ&UfRïÙKº¨ZéÂ,­ŸÃ\Bó¡õ'dyqŒ
+Zı¹ùEypájµ7–XıE¿T%Œƒ=Ù&3#ĞXw¦¸1‚h0‚d0“0{10	UUS10	UCA10USan Francisco10U
+OpenAI OpCo, LLC10
+UTSA10UOpenAI TSA Issuing CAaÛF(2ŠŒJ·¿ş`ãl?q·0	`†He  ‚%0	*†H†÷	1*†H†÷	0/	*†H†÷	1" N‘9/U¹ä+$à‹êÜS‡™•‰£	T,?¢É!¿0Õ*†H†÷	/1Å0Â0¿0¼ ½O¹²L6gˆnïAámşÙ"¿[’JĞ¢Ä`F"z0—0¤}0{10	UUS10	UCA10USan Francisco10U
+OpenAI OpCo, LLC10
+UTSA10UOpenAI TSA Issuing CAaÛF(2ŠŒJ·¿ş`ãl?q·0	*†H†÷ ‚€4æànúhI‘ó3ÄÂi¯ş5E^z)›ù2ën‘»è¯jdy&ÔÔ¶éliqécY±;Ò2føsKµ%-£.dl+ôßk˜³€oÌ¬ø uP’iø ÔŠ¬ùˆß*£œ÷¤1%R‹ßO7Q²w)‡Z)ÑúB>‡«l"…hgì-?õ‹İWÏ‚×7ñÿ?Ó¢Ñ•^%`O±†;Àüæ´ßÕÉššãr˜ª’šEí”	‰Õµ>˜[Ùuzş^Ò“8/rWÃ`‡5Ù¢”¹!}Û»Çÿ•üPC#»!T“‡«ÖãåTèª`0sç=rÅßCóp…Ùg‡÷ÍBëO™dÿÏcœõ¼#5NÕ`ÄêƒĞ:_NIà-ñÀÈø]isî:>79˜ÛÙÇ¾ˆq¥'håc@­Ô6ğÿ¶q†‘š¨-5Á»¡·i ç×¢6x4Äô‘Ueõ‰TôwÍ	c–Álæÿq¿-nèerVals¡hocspValsY×0‚Ó
+  ‚Ì0‚È	+0‚¹0‚µ0é¢Ëc—lâ­à-e&¦:ti™20261120140132Z0˜0•0I0	+ ß‚7S^SØ3±à=$5ñuæá
+9=GÜ—¯ˆ{MsÍåî¤¥*¥üépŒò€1îDds€ 20261120140132Z 20261127140131Z¡"0 0	+020161122140132Z¡#0!0	+0İ$1Ï*F·i¦Z&ü»mW0	*†H†÷ ‚ #áõE® ©]áèég
+<P‰-ôÁZı¬ã[òÜ»»‚<7#Ñ½á&-¸ÀlaA‹«¬?ÛÉÖD¢š7Á¿çHw-@t”QÓîø‡*J™qŸÖÓ«ÿ­ª†"5®BğÎ…™¡kVèjŸ„=—õ€¿Ë¶’‘Î?È!a{{©ÆÊt9­æp‹`<ãRßßDP?6j¾$ëo>ÕU"¾P«Ôä³M²G{ şjƒ5Ïó>î8š†§ÄÁó‡_L§xƒâÊg–5ç¹Á¿vÚÈŠbj§”`]P2Yú^¼Ê
+¶Ì¶lK©ªYŒÈ¸şUõ&¶1.¨¥F´Çªİ~©gYÎbÚ«½G!¼3‹vß½ş¨,ëCÓ>]ÿ50}©¨f¬
+dŞ>ÂSŠ€»Úy£=˜_•ÆGTËªP[­˜l1·•%ëFòuÖ´Ó>“<Rµ×ÎÛÔ€ÈÃ	×pD¥rtEö™şÖEæ¬L&´ ‚10‚-0‚)0‚ 97Çk÷Ó!˜S¤¢¡”R/0	*†H†÷ 0J1!0USSL.com C2PA ICA R1 202510U
+SSL Corporation10	UUS0261104111802Z271104111801Z0M10	UUS10U
+SSl Corp1+0)U"SSL.com C2PA ICA R1 OCSP Responder0‚¢0	*†H†÷ ‚ 0‚Š‚ ²İW ¤¢º¿¼‚	²ì~š|j>ı&ö#zdêµ9«3±ËŸŸLK³/ã¾ç}VÎµXl¡/é@düá°õu”Û§¾jH*ˆV#•MJúš,M/µp÷&®RÚ8æ<º<ğo9”à£Sho–yC]„ôğ 9áJ“p¬…†½µ?¡®“i_Ú"]ié7¥Ê5¾k©«gø Ê5JD?y¬Jty¿ŸSj±¿ì¸*ÑG¬¿±»h•Hf"c9ÜìÚËrÙÃ×IóèíG.V˜~ÏïËó—N¦zæQómàb®ÔáEœöÆGèé‰ãWã€2JTŒŒy4jµ­”.‹ÈÀÂ¤†‡‡À¥_‚…9hÿõô˜ËY Â¬:•ˆ"fn,_ËAqñY4²88É÷ÿ,GQ( ¥š H±´J=CˆÊÁ?öU"Äò£Y÷²ÖÊùdKıÄ¨N4¡^×aåàm¦¹i›E¡§ÔH³Å¾Á› £‡0„0Uÿ0 0U#0€9=GÜ—¯ˆ{MsÍåî¤¥*0	+0 0U%0
++	0UËc—lâ­à-e&¦:ti™0Uÿ€0	*†H†÷ ‚ 
+rÑÚZ>t["_© /û†2¼&êÅxÒF}p91Ü‡dcwì†‚%zÑ¾ÃÇ¸®LÒFŒJêÓ¥¿¯@Ğñı$~t–†˜‰;ÊŞcû'ôsqHÒP›Ìh¾îçmW'¡Ù–ùÄ@†ƒİ»~‚Ì8Ğ´–È±r‚@`ŒšôqÒV˜Š
+Œ¡+L8 …ª½•š¾Ş‡ó{¼a<f.Ã**(<uI\Ã‹V¬%¶3Ç!'y(Õ?yp¹NÙ„.íu°Ä	Ôîú|ægk–ÛM F	HÃğ	ï4Ñ8%vÈz@ƒºaü|ƒ¼â,ãâY°V…6ıùë¢!k‡-‰3("…3z–Wq\A¹oÂdFé[†Ò>~ôı}Ì”AÖª50ÌM"zî…ò®#ØÛ`ƒì¹ô K”ì	ò=SÒ¿ğmjŒÿ¿ÈÖ¸ê<Umiî¬kPIØeÂÚ/òaè9’à;OÒñß½Ò
+¸‹Ç•tPogZñ·f}ÆØ=¨/]vŠ°†<‰¢6%§5,¨$¿ĞQ~áÅMÓğ$R>¥­ß¢øgîîıú™’ó:şi(ôeIÖ`_û ×àèPŞ<	f€/ˆ
+'U´û¦*xWùC†'Bxş‰×Åì=.‚üe™kZYğBƒñ#†Ó­­%&hpÁÔØû'¨»Lì¦Ä¸5·Ü•cpadY&t                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    öY `Õ£ú^«>=Ø‚ypâñÍ•U@È/İ7¶?’£8Û§ğñÂÌ5îc İ*  ñ5`ÎŠ™æš ş¡¦l–YIÿÆÒœÚ)gr4tRæO’ „IsÛ$©ªôö¥×Æ4¨€G°CˆE9Ûÿ´wÏ°5
+]°#ÃX!Çš*€3„p<9^S'sö±¿1ÂÔz@ÚÙ™öÁÓëzøjV~8yË*VŠó?KßèMØ2şôÏ](¬•¦B™ğâ_¤VşŸÏ'}DHı«ŠIQß_ãµ{Ã0şÆİ+;yT§S5ª›ÒÓï(Ùyş‹ñ;`¾ªÓ•¦Ëv
+endstream
+endobj
+18 0 obj
+<< /AFRelationship /C2PA_Manifest /Desc (Content Credentials) /F (Content Credentials) /EF << /F 17 0 R >> /Subtype (application/c2pa) /Type /Filespec /UF (Content Credentials) >>
+endobj
+xref
+3 1
+0000023042 00001 n 
+17 2
+0000023177 00000 n 
+0000047556 00000 n 
+trailer
+<< /Size 19 /Root 3 1 R /Prev 22623 >>
+startxref
+47752
+%%EOF
